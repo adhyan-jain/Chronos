@@ -1,0 +1,28 @@
+{
+  "study": "diagnostic long-history crossover extension",
+  "created_utc": "2026-10-01T22:55:44.494852+00:00",
+  "profile": [
+    "diagnostic",
+    10000,
+    256,
+    "repeated-key",
+    20261009
+  ],
+  "operations": [
+    8192,
+    16384,
+    32768,
+    65536,
+    131072
+  ],
+  "excluded_from_selection": true,
+  "scope": "exploratory extension after held-out study; no threshold reselection; repeated cached queries on one repository per workload",
+  "source_code_sha256": {
+    "experiments\\crossover_extension.py": "bb25101eb7440770b2d349e3abf7ebcc21af8b46905ca9d64d8765f3b83e18c0",
+    "experiments\\threshold_validation.py": "c9cf9726df8de7247f9edaf064c118b894d1c1b460973558e033850a840de4a3",
+    "experiments\\workloads.py": "8ea87cd780a7ef3c2708bc8613895e1792e2d446101d73a6b7c726cdc5fdb64c",
+    "experiments\\adapters.py": "ae619430111dfe8b121fdff528b0bfb687db6d6a60ecf83ac3011ca98fdc74ff",
+    "sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835"
+  }
+}
