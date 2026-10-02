@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "study": "public-dataset",
+  "mode": "evaluation",
+  "run_id": "a066d5797ee54ec5abda0854cd17cd6b",
+  "created_utc": "2026-10-01T21:01:20.264673+00:00",
+  "models": [
+    "revon-m"
+  ],
+  "warmups": 0,
+  "measured_trials": 1,
+  "workloads": [
+    {
+      "name": "tlc-n1000000-h10-c1000",
+      "rows": 1000000,
+      "commits": 10,
+      "changes_per_commit": 1000,
+      "seed": 20261001,
+      "payload_bytes": 8,
+      "locality": "spread"
+    }
+  ],
+  "workload_digests": {
+    "tlc-n1000000-h10-c1000": "c147518b996772c3d989586fbf5cecd7ea668cb9acae1acfe760d048fd769aa1"
+  },
+  "dataset": {
+    "dataset": "NYC TLC yellow taxi trip records",
+    "release": "January 2024",
+    "source_url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+    "download_url": "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet",
+    "download_sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+    "download_bytes": 49961641,
+    "original_records": 2964624,
+    "retained_records": 1000000,
+    "retained_fields": [
+      "VendorID",
+      "tpep_pickup_datetime",
+      "tpep_dropoff_datetime",
+      "passenger_count",
+      "trip_distance",
+      "PULocationID",
+      "DOLocationID",
+      "payment_type",
+      "fare_amount",
+      "tip_amount",
+      "total_amount"
+    ],
+    "source_schema": "VendorID: int32\ntpep_pickup_datetime: timestamp[us]\ntpep_dropoff_datetime: timestamp[us]\npassenger_count: int64\ntrip_distance: double\nRatecodeID: int64\nstore_and_fwd_flag: large_string\nPULocationID: int32\nDOLocationID: int32\npayment_type: int64\nfare_amount: double\nextra: double\nmta_tax: double\ntip_amount: double\ntolls_amount: double\nimprovement_surcharge: double\ntotal_amount: double\ncongestion_surcharge: double\nAirport_fee: double",
+    "missing_values": {
+      "VendorID": 0,
+      "tpep_pickup_datetime": 0,
+      "tpep_dropoff_datetime": 0,
+      "passenger_count": 47277,
+      "trip_distance": 0,
+      "PULocationID": 0,
+      "DOLocationID": 0,
+      "payment_type": 0,
+      "fare_amount": 0,
+      "tip_amount": 0,
+      "total_amount": 0
+    },
+    "malformed_records": 0,
+    "key_construction": "release + first 16 source checksum hex digits + zero-based physical row ordinal",
+    "identifier_scope": "Unique within the checksum-pinned file; not a trip identity across releases",
+    "duplicates": "No supplied trip identifier; identical field values remain distinct source rows. Ordinals are unique.",
+    "sampling": "Affine permutation of physical row ordinals, not a uniform random permutation; nested rank prefixes",
+    "sampling_seed": 20261001,
+    "offset": 996110,
+    "stride": 1344731,
+    "serialization": "sorted-key compact UTF-8 JSON, ensure_ascii=False, allow_nan=False; timestamps ISO 8601 without invented timezone; null/nonfinite to null",
+    "prepared_sha256": "6608b7680e82432ca22f90a71d4994676ffd290c4fc85f17f91fab03d4c7b661",
+    "usage_terms": "NYC Open Data FAQ permits unrestricted use; AWS registry points to NYC terms. No CC license is asserted. Raw/processed records remain local.",
+    "terms_urls": [
+      "https://www.nyc.gov/opendata/get-started/FAQs",
+      "https://www.nyc.gov/main/terms-of-use",
+      "https://registry.opendata.aws/nyc-tlc-trip-records-pds/"
+    ],
+    "prepared_utc": "2026-10-01T15:55:44.080960+00:00"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.14",
+  "package_versions": {
+    "pyarrow": "25.0.1",
+    "psutil": "7.2.2"
+  },
+  "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "cpu_logical": 12,
+  "physical_memory_bytes": 16794324992,
+  "available_memory_at_start_bytes": 3208720384,
+  "free_disk_at_start_bytes": 89087811584,
+  "trial_wall_clock_limit_seconds": 900,
+  "trie": {
+    "branching_factor": 8,
+    "depth": 4,
+    "threshold": 4096
+  },
+  "update_rule": "uniform seeded sample without replacement within each commit; +0.01 fare and total; repeated records across commits allowed; updates only; histories synthetic",
+  "endpoints": "diff initial version 1 to version H+1; all trials verify both endpoints; first measured trial per system/configuration verifies every historical version outside timing",
+  "payload_bytes_field": "null in typed public trial evidence and empty in CSV because real values have variable lengths; internal spec validation placeholder 8 is not a payload measurement",
+  "measurement": "existing whole-system adapter workflow; import separately; trial commit statistic is median of H timed commits; diff includes canonicalization; storage after timed diff/checkout and untimed historical checks, before close/compaction",
+  "sampling_limitations": "affine nested sample is dispersed but not a uniform random permutation; single seed, single month, no observed change histories",
+  "source_code_sha256": {
+    "experiments\\public_dataset.py": "292db1a12468d2eaaa9d1434b01b80c38c8ec66968d972c953f7a5cfe787cf68",
+    "experiments\\public_dataset_study.py": "eee977f02110de4f960d08a93501ff53a1a63de900c93d75bd1e3bb5bd3ecd94",
+    "experiments\\final_benchmark.py": "db6e6e29a57855625424bb882ce3352806b9ad8a565689f8199add046589edb0",
+    "experiments\\adapters.py": "ae619430111dfe8b121fdff528b0bfb687db6d6a60ecf83ac3011ca98fdc74ff",
+    "experiments\\workloads.py": "8ea87cd780a7ef3c2708bc8613895e1792e2d446101d73a6b7c726cdc5fdb64c",
+    "sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835",
+    "requirements.txt": "b2c3a0cc08c5c45b8043c6a05423f201d144171b608d11c760767ba9645d939c"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "issues": [],
+  "executions": 1,
+  "ok": 1,
+  "failures": [],
+  "historical_states_verified": 11,
+  "evidence_files_sha256": {
+    "manifest.json": "008bfdb6bfcb53df67667979f78a146d9799d83b6aee23b921604e17553eed6e",
+    "trials.jsonl": "a2aa30c96d128b6b9a7d76db3a4978489961ddbebb1d76c15ca5e46c1b9bd742",
+    "raw_results.csv": "5f1026ca1c567d34e8372b3f941e5b9c206b84ec2556cbaa0577a7c483256578",
+    "summary.csv": "1e7cfa6d8badff171ce33528f960801ab90f7147183afb99f1ae0f3723174ee7",
+    "elapsed.jsonl": "13183d4b28a1a92757858cbbacfbcb449e754f686a0c6778f8558870605367a6"
+  },
+  "verification_files_sha256": {
+    "tlc-n1000000-h10-c1000-measured-1-revon-m.json": "607bcc67a92417350190e71fb1263c7db301851b72c425525f406e84d75277d0"
+  }
+}
