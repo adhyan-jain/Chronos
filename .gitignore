@@ -46,8 +46,11 @@ tmp/
 tmp*/
 /output/
 /local_artifacts/
+/data/public/
+/.codex_tmp/
 
 # Local-only preparation and review material
+/2_Revon Research Paper_comments.docx
 /Revon_Current_Stage_Presentation_Guide.pdf
 /Paper Basics.pdf
 /Research Abstract Review 1.pdf
