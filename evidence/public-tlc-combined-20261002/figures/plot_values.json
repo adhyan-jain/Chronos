@@ -1,0 +1,488 @@
+[
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Snapshot",
+    "median": 25.80555,
+    "p25": 23.177525,
+    "p75": 31.412,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Snapshot",
+    "median": 257.41075,
+    "p25": 254.0664,
+    "p75": 260.587175,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Snapshot",
+    "median": 2652.01215,
+    "p25": 2078.9503750000003,
+    "p75": 2729.0997749999997,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Log-only",
+    "median": 2.84855,
+    "p25": 2.7251250000000002,
+    "p75": 3.1594249999999997,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Log-only",
+    "median": 4.11415,
+    "p25": 4.091049999999999,
+    "p75": 4.3307,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Log-only",
+    "median": 10.843499999999999,
+    "p25": 8.633725,
+    "p75": 12.591650000000001,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Revon-M (forced Merkle)",
+    "median": 19.476950000000002,
+    "p25": 18.3163,
+    "p75": 23.009500000000003,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Revon-M (forced Merkle)",
+    "median": 202.77505000000002,
+    "p25": 177.19885,
+    "p75": 244.323825,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Revon-M (forced Merkle)",
+    "median": 5355.20595,
+    "p25": 2780.566275,
+    "p75": 5968.450699999999,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Revon-H",
+    "median": 18.71785,
+    "p25": 18.603375,
+    "p75": 21.781750000000002,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Revon-H",
+    "median": 161.087,
+    "p25": 131.217425,
+    "p75": 252.4932,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Revon-H",
+    "median": 4764.26365,
+    "p25": 3086.150575,
+    "p75": 5159.494650000001,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Dolt",
+    "median": 1045.2767,
+    "p25": 960.810025,
+    "p75": 1102.966925,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Dolt",
+    "median": 749.0839000000001,
+    "p25": 713.496975,
+    "p75": 836.3965000000001,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Dolt",
+    "median": 1175.64005,
+    "p25": 931.2070249999999,
+    "p75": 1297.20245,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Dolt (bulk import)",
+    "median": 1068.62545,
+    "p25": 861.2396749999999,
+    "p75": 1160.836575,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Dolt (bulk import)",
+    "median": 716.779,
+    "p25": 705.92145,
+    "p75": 968.039625,
+    "trials": 7
+  },
+  {
+    "panel": "incremental_commit_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Dolt (bulk import)",
+    "median": 937.173,
+    "p25": 884.2965750000001,
+    "p75": 1014.2602249999999,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Snapshot",
+    "median": 135.4305,
+    "p25": 130.8145,
+    "p75": 168.9187,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Snapshot",
+    "median": 1584.1174,
+    "p25": 1551.4184500000001,
+    "p75": 1692.86445,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Snapshot",
+    "median": 20912.436,
+    "p25": 16010.36875,
+    "p75": 22305.867,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Log-only",
+    "median": 19.4416,
+    "p25": 13.3379,
+    "p75": 23.045949999999998,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Log-only",
+    "median": 29.6248,
+    "p25": 24.948050000000002,
+    "p75": 30.66635,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Log-only",
+    "median": 148.1643,
+    "p25": 98.2182,
+    "p75": 150.7389,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Revon-M (forced Merkle)",
+    "median": 1.2668,
+    "p25": 1.2267,
+    "p75": 1.4722,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Revon-M (forced Merkle)",
+    "median": 25.9516,
+    "p25": 25.73865,
+    "p75": 32.02235,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Revon-M (forced Merkle)",
+    "median": 621.4851,
+    "p25": 466.40545,
+    "p75": 731.3022,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Revon-H",
+    "median": 0.6122,
+    "p25": 0.56655,
+    "p75": 0.66645,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Revon-H",
+    "median": 8.6478,
+    "p25": 8.54475,
+    "p75": 10.2751,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Revon-H",
+    "median": 651.0114,
+    "p25": 448.6592,
+    "p75": 693.1259,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Dolt",
+    "median": 362.0958,
+    "p25": 259.59875,
+    "p75": 387.5997,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Dolt",
+    "median": 329.0984,
+    "p25": 321.28525,
+    "p75": 330.90340000000003,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Dolt",
+    "median": 1068.9656,
+    "p25": 835.7556999999999,
+    "p75": 1242.858,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Dolt (bulk import)",
+    "median": 399.2295,
+    "p25": 338.77414999999996,
+    "p75": 425.24995,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Dolt (bulk import)",
+    "median": 327.174,
+    "p25": 301.6512,
+    "p75": 450.038,
+    "trials": 7
+  },
+  {
+    "panel": "diff_ms",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Dolt (bulk import)",
+    "median": 1009.2871,
+    "p25": 805.1279999999999,
+    "p75": 1090.23105,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Snapshot",
+    "median": 37214863.0,
+    "p25": 37214863.0,
+    "p75": 37214863.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Snapshot",
+    "median": 372145295.0,
+    "p25": 372145295.0,
+    "p75": 372145295.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Snapshot",
+    "median": 3721432689.0,
+    "p25": 3721432689.0,
+    "p75": 3721432689.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Log-only",
+    "median": 3452941.0,
+    "p25": 3452941.0,
+    "p75": 3452941.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Log-only",
+    "median": 34526891.0,
+    "p25": 34526891.0,
+    "p75": 34526891.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Log-only",
+    "median": 345265489.0,
+    "p25": 345265489.0,
+    "p75": 345265489.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Revon-M (forced Merkle)",
+    "median": 15273984.0,
+    "p25": 15271936.0,
+    "p75": 15273984.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Revon-M (forced Merkle)",
+    "median": 94400512.0,
+    "p25": 94392320.0,
+    "p75": 94416896.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Revon-M (forced Merkle)",
+    "median": 1516961792.0,
+    "p25": 1516939264.0,
+    "p75": 1516978176.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Revon-H",
+    "median": 15269888.0,
+    "p25": 15269888.0,
+    "p75": 15276032.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Revon-H",
+    "median": 94416896.0,
+    "p25": 94396416.0,
+    "p75": 94420992.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Revon-H",
+    "median": 1516965888.0,
+    "p25": 1516945408.0,
+    "p75": 1516980224.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Dolt",
+    "median": 1457573.0,
+    "p25": 1457419.0,
+    "p75": 1457944.5,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Dolt",
+    "median": 14160065.0,
+    "p25": 14159938.5,
+    "p75": 14160122.5,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Dolt",
+    "median": 139203958.0,
+    "p25": 139203881.5,
+    "p75": 139204360.5,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n10000-h10-c10",
+    "model": "Dolt (bulk import)",
+    "median": 1419536.0,
+    "p25": 1419420.5,
+    "p75": 1419623.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n100000-h10-c100",
+    "model": "Dolt (bulk import)",
+    "median": 13582463.0,
+    "p25": 13582169.0,
+    "p75": 13582609.0,
+    "trials": 7
+  },
+  {
+    "panel": "storage_bytes",
+    "scenario": "tlc-n1000000-h10-c1000",
+    "model": "Dolt (bulk import)",
+    "median": 133074946.0,
+    "p25": 133074778.5,
+    "p75": 133075130.0,
+    "trials": 7
+  }
+]

@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "source_records_traced": 1000000,
+  "source_sha256": "c4d59da7bbc8abaeeeb1727947ee93d9891a71acb42854bd80db1571b2030510",
+  "prepared_sha256": "6608b7680e82432ca22f90a71d4994676ffd290c4fc85f17f91fab03d4c7b661",
+  "missing_values": {
+    "VendorID": 0,
+    "tpep_pickup_datetime": 0,
+    "tpep_dropoff_datetime": 0,
+    "passenger_count": 47277,
+    "trip_distance": 0,
+    "PULocationID": 0,
+    "DOLocationID": 0,
+    "payment_type": 0,
+    "fare_amount": 0,
+    "tip_amount": 0,
+    "total_amount": 0
+  },
+  "scenarios": [
+    {
+      "scenario": "tlc-n10000-h10-c10",
+      "workload_sha256": "1efcea4e556f6ae2da94dd3a89ce7dfff6183505ee1b5052fe7a137aa7781d70",
+      "versions_independently_replayed": 11,
+      "retained_trial_reports_checked": 54,
+      "changed_records_initial_to_final": 100,
+      "diff_sha256": "ee27afb71b13f23e35c09c3295983b2d173a446da7c2199db557a14a88876cbc"
+    },
+    {
+      "scenario": "tlc-n100000-h10-c100",
+      "workload_sha256": "bc08bdde2ec6b3183fe6f25af04af0999960b357385020b77cf935f2693e1662",
+      "versions_independently_replayed": 11,
+      "retained_trial_reports_checked": 54,
+      "changed_records_initial_to_final": 998,
+      "diff_sha256": "8b313583901d105496839ff59be272dae29404f6ac9a6ed753df4158085e2957"
+    },
+    {
+      "scenario": "tlc-n1000000-h10-c1000",
+      "workload_sha256": "c147518b996772c3d989586fbf5cecd7ea668cb9acae1acfe760d048fd769aa1",
+      "versions_independently_replayed": 11,
+      "retained_trial_reports_checked": 54,
+      "changed_records_initial_to_final": 9956,
+      "diff_sha256": "1f14eb741227544fe064f13d207ca3ac4344381e12ee47ec3389189e87e6162e"
+    },
+    {
+      "scenario": "tlc-n100000-h50-c100",
+      "workload_sha256": "3fff093cbdd1f781aaa210ce09528f88f20cdbdede7f9c956857b151ad0844d5",
+      "versions_independently_replayed": 51,
+      "retained_trial_reports_checked": 54,
+      "changed_records_initial_to_final": 4901,
+      "diff_sha256": "b94ca8b9b6e4d19ed6c299e3703798d4e2ac92e8c2405cf83e35b45c01a1ef0a"
+    },
+    {
+      "scenario": "tlc-n100000-h10-c10",
+      "workload_sha256": "91ac67233dd9690ec7f8b227c28734ef61713fa3c4a69265f6a5e523d4ae1509",
+      "versions_independently_replayed": 11,
+      "retained_trial_reports_checked": 54,
+      "changed_records_initial_to_final": 100,
+      "diff_sha256": "bcc36d5f5346735d75e9d8953d5afffcd1d800f74fddd51cc9e513233f3e7e84"
+    },
+    {
+      "scenario": "tlc-n100000-h10-c1000",
+      "workload_sha256": "a7d5ca97390ade8197830f615be7fa8022aa6de878515a4585b872fcd4e26053",
+      "versions_independently_replayed": 11,
+      "retained_trial_reports_checked": 54,
+      "changed_records_initial_to_final": 9552,
+      "diff_sha256": "dab42b751a8c938fc98c15c4d5aadd1972d3e1464ecb24509ad297ac0de98220"
+    }
+  ]
+}
