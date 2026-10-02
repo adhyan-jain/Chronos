@@ -8,7 +8,7 @@ from types import SimpleNamespace
 import unittest
 import uuid
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import Mock, patch
 
 from experiments.adapters import (
     DoltAdapter,
@@ -88,6 +88,30 @@ class HarnessTests(unittest.TestCase):
 
     def tearDown(self) -> None:
         shutil.rmtree(self.root, ignore_errors=True)
+
+    def test_timeout_preserves_resource_error_when_worker_already_exited(self) -> None:
+        import subprocess
+
+        class MissingWorker(Exception):
+            pass
+
+        tracked = Mock()
+        tracked.children.side_effect = MissingWorker("worker exited")
+        process = Mock(pid=12345)
+        process.poll.return_value = 0
+        process.communicate.side_effect = [subprocess.TimeoutExpired("worker", .01), ("", "")]
+        sampler = SimpleNamespace(Process=lambda pid: tracked,
+                                  NoSuchProcess=MissingWorker, AccessDenied=PermissionError)
+        with patch.dict("sys.modules", {"psutil": sampler}), \
+             patch("experiments.final_benchmark.subprocess.Popen", return_value=process), \
+             patch("experiments.final_benchmark.threading.Thread"):
+            result = run_trial(run_id="timeout-regression", phase="evaluation", workload=self.workload,
+                               model_key="snapshot", trial_kind="measured", trial=2,
+                               threshold=4096, scratch_root=self.root, timeout_seconds=.01)
+        self.assertEqual(result.status, "error")
+        self.assertIn("trial exceeded 0.01s wall-clock resource limit", result.notes)
+        self.assertNotIn("MissingWorker", result.notes)
+        process.kill.assert_not_called()
 
     def test_all_python_adapters_match_same_oracle(self) -> None:
         for model in ("snapshot", "log", "revon-m", "revon-h"):
