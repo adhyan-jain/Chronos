@@ -9,6 +9,7 @@ from __future__ import annotations
 import argparse
 import csv
 import gc
+import hashlib
 import json
 import os
 import platform
@@ -35,6 +36,8 @@ from .adapters import (
     decode_diff_bytes,
     decode_state_bytes,
     value_digest,
+    canonical_state_bytes,
+    canonical_bytes,
 )
 from .workloads import Workload, WorkloadSpec, build_workload, profile_specs
 
@@ -58,7 +61,7 @@ class TrialRecord:
     commits: int
     changes_per_commit: int
     locality: str
-    payload_bytes: int
+    payload_bytes: Optional[int]
     workload_sha256: str
     strategy_requested: str
     strategy_selected: str
@@ -206,6 +209,8 @@ def _run_trial_local(
     scratch_root: Optional[Path] = None,
     trial_path_override: Optional[Path] = None,
     cleanup_on_exit: bool = True,
+    verification_path: Optional[Path] = None,
+    verify_all_history: bool = True,
 ) -> TrialRecord:
     model_display = {
         "snapshot": "Snapshot",
@@ -248,7 +253,10 @@ def _run_trial_local(
         memory_peaks.append(checkout_memory)
 
         # Correctness is deliberately outside all timed regions.
-        initial_state = decode_state_bytes(adapter.checkout(1))
+        initial_output = adapter.checkout(1)
+        initial_state = decode_state_bytes(initial_output)
+        initial_output_sha256 = hashlib.sha256(initial_output).hexdigest() if verification_path is not None else None
+        del initial_output
         final_state = decode_state_bytes(final_output)
         observed_diff = decode_diff_bytes(diff_output)
         state_correct = (
@@ -275,6 +283,35 @@ def _run_trial_local(
             raise AssertionError(
                 "checkout or diff disagrees with the workload oracle"
             )
+
+        if verification_path is not None:
+            # Endpoint objects have already been compared exactly. Release decoded
+            # copies before the additional, untimed history checks at large N.
+            del initial_state, final_state
+            history = []
+            versions = range(1, len(workload.states) + 1) if verify_all_history else (1, len(workload.states))
+            for version in versions:
+                observed = initial_output_sha256 if version == 1 else hashlib.sha256(
+                    final_output if version == len(workload.states) else adapter.checkout(version)
+                ).hexdigest()
+                expected = hashlib.sha256(canonical_state_bytes(workload.states[version - 1])).hexdigest()
+                if observed != expected:
+                    raise AssertionError(f"historical state {version} disagrees with oracle")
+                history.append({"version": version, "observed_sha256": observed, "oracle_sha256": expected})
+            verification_path.parent.mkdir(parents=True, exist_ok=True)
+            verification_path.write_text(json.dumps({
+                "workload_sha256": workload.digest,
+                "historical_states": history,
+                "all_history_verified": verify_all_history,
+                "diff_output_sha256": hashlib.sha256(diff_output).hexdigest(),
+                "diff_oracle_sha256": hashlib.sha256(canonical_bytes({"changes": [
+                    {"key": key, "old_value_sha256": hashes[0], "new_value_sha256": hashes[1]}
+                    for key, hashes in sorted(expected_diff.items())
+                ]})).hexdigest(),
+                "diff_correct": diff_correct, "changed_keys": len(observed_diff),
+                "commit_intervals_ms": operation_times,
+                "timing_note": "historical verification is outside all timed intervals",
+            }, indent=2), encoding="utf-8")
 
         peak_memory = max(memory_peaks)
         memory_method = "external parent process-tree RSS sampler (psutil, 10 ms; isolated trial)"
@@ -421,6 +458,7 @@ def _linux_process_tree_sample(root_pid: int) -> list[tuple[int, int, float, int
                 io_fields.get("read_bytes", 0),
                 io_fields.get("write_bytes", 0),
             )
+
         except (OSError, ValueError, IndexError):
             continue
     descendants = {root_pid}
@@ -449,6 +487,10 @@ def run_trial(
     threshold: int,
     execution_order: int = 1,
     scratch_root: Optional[Path] = None,
+    public_dataset: Optional[Path] = None,
+    verification_path: Optional[Path] = None,
+    timeout_seconds: Optional[float] = None,
+    verify_all_history: bool = True,
 ) -> TrialRecord:
     """Run one isolated trial so prior models cannot inflate its RSS baseline."""
     scratch = (scratch_root or Path("tmp") / "experiment-work").resolve()
@@ -470,6 +512,9 @@ def run_trial(
         "scratch_root": str(scratch),
         "trial_path": str(trial_path),
         "result_path": str(result_path),
+        "public_dataset": str(public_dataset.resolve()) if public_dataset else None,
+        "verification_path": str(verification_path.resolve()) if verification_path else None,
+        "verify_all_history": verify_all_history,
     }
     config_path.write_text(json.dumps(config), encoding="utf-8")
     try:
@@ -541,7 +586,30 @@ def run_trial(
 
         monitor = threading.Thread(target=sample_process_tree, daemon=True)
         monitor.start()
-        stdout, stderr = process.communicate()
+        try:
+            stdout, stderr = process.communicate(timeout=timeout_seconds)
+        except subprocess.TimeoutExpired:
+            if tracked is not None:
+                try:
+                    children = tracked.children(recursive=True)
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    children = []
+                for child in children:
+                    try:
+                        child.kill()
+                    except (psutil.NoSuchProcess, psutil.AccessDenied):
+                        pass
+            if process.poll() is None:
+                try:
+                    process.kill()
+                except OSError:
+                    if process.poll() is None:
+                        raise
+            process.communicate()
+            raise RuntimeError(f"trial exceeded {timeout_seconds}s wall-clock resource limit; peak sampled RSS={sampled_peak[0]} bytes")
+        finally:
+            stop.set()
+            monitor.join(timeout=0.1)
         stop.set()
         monitor.join(timeout=0.1)
         if process.returncode != 0 or not result_path.exists():
@@ -607,7 +675,11 @@ def run_trial(
 
 def _run_worker_config(path: Path) -> int:
     config = json.loads(path.read_text(encoding="utf-8"))
-    workload = build_workload(WorkloadSpec(**config["workload_spec"]))
+    if config.get("public_dataset"):
+        from .public_dataset import build_public_workload
+        workload = build_public_workload(WorkloadSpec(**config["workload_spec"]), Path(config["public_dataset"]))
+    else:
+        workload = build_workload(WorkloadSpec(**config["workload_spec"]))
     if workload.digest != config["workload_sha256"]:
         raise ValueError("isolated worker regenerated a different workload digest")
     record = _run_trial_local(
@@ -622,6 +694,8 @@ def _run_worker_config(path: Path) -> int:
         scratch_root=Path(config["scratch_root"]),
         trial_path_override=Path(config["trial_path"]),
         cleanup_on_exit=False,
+        verification_path=Path(config["verification_path"]) if config.get("verification_path") else None,
+        verify_all_history=config.get("verify_all_history", True),
     )
     Path(config["result_path"]).write_text(
         json.dumps(asdict(record), sort_keys=True), encoding="utf-8"
