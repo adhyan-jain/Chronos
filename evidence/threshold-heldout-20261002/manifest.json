@@ -1,0 +1,83 @@
+{
+  "study": "held-out operation threshold",
+  "mode": "evaluation",
+  "created_utc": "2026-10-01T22:45:26.957787+00:00",
+  "python": "3.14.3",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "logical_cpus": 12,
+  "ram_bytes": 16794324992,
+  "available_ram_bytes": 3037364224,
+  "thresholds": [
+    1024,
+    2048,
+    4096,
+    8192,
+    16384
+  ],
+  "operations": [
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768
+  ],
+  "profiles": [
+    [
+      "calibration",
+      10000,
+      4,
+      "spread",
+      20261003
+    ],
+    [
+      "calibration",
+      100000,
+      16,
+      "spread",
+      20261004
+    ],
+    [
+      "calibration",
+      10000,
+      64,
+      "repeated-key",
+      20261005
+    ],
+    [
+      "validation",
+      100000,
+      4,
+      "repeated-key",
+      20261006
+    ],
+    [
+      "validation",
+      10000,
+      16,
+      "spread",
+      20261007
+    ],
+    [
+      "validation",
+      100000,
+      64,
+      "spread",
+      20261008
+    ]
+  ],
+  "warmups": 2,
+  "measured_queries": 7,
+  "scope": "same-repository in-process repeated queries; one fixed workload per profile/count; cached objects; no cross-machine or repeated-repository uncertainty",
+  "timing": "diff_versions plus shared canonical output; correctness and standalone decision probes outside timed diff; ancestry/count probe not a causal overhead subtraction",
+  "selection_rule": "equal-weight mean latency divided by faster forced-path median over calibration cases; lowest score; exact tie chooses smaller threshold; freeze before validation",
+  "source_code_sha256": {
+    "experiments\\threshold_validation.py": "c9cf9726df8de7247f9edaf064c118b894d1c1b460973558e033850a840de4a3",
+    "experiments\\workloads.py": "8ea87cd780a7ef3c2708bc8613895e1792e2d446101d73a6b7c726cdc5fdb64c",
+    "experiments\\adapters.py": "ae619430111dfe8b121fdff528b0bfb687db6d6a60ecf83ac3011ca98fdc74ff",
+    "sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835"
+  }
+}
