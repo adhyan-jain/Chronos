@@ -16,11 +16,11 @@ import pymupdf
 
 ROOT=Path(__file__).resolve().parents[1]
 TITLE="Adaptive Merkle Trie Versioning for Efficient Structured Data Management"
-ROMANS={"I":1,"II":2,"III":3,"IV":4,"V":5,"VI":6,"VII":7,"VIII":8,"IX":9,"X":10}
+ROMANS={"I":1,"II":2,"III":3,"IV":4,"V":5,"VI":6,"VII":7,"VIII":8,"IX":9,"X":10,"XI":11}
 
 def normalize(text):
     text=text.replace('Tables VI and VII','Tables 6 and 7')
-    text=re.sub(r"\b(?:TABLE|Table) (VIII|VII|III|VI|IV|IX|II|V|X|I)\b",lambda m:"Table "+str(ROMANS[m[1]]),text)
+    text=re.sub(r"\b(?:TABLE|Table) (VIII|VII|III|VI|IV|IX|XI|II|V|X|I)\b",lambda m:"Table "+str(ROMANS[m[1]]),text)
     text=re.sub(r"^([IVX]+)\. ",lambda m:str(ROMANS[m[1]])+" ",text)
     text=re.sub(r"^[A-Z]\. ","",text)
     text=re.sub(r"(Fig\. \d+|Table \d+)\. ",r"\1 ",text)
@@ -42,7 +42,7 @@ def check_doc(path,discover):
     assert " ".join(doc.paragraphs[0].text.split())==TITLE
     abstract=next(p.text for p in doc.paragraphs if p.text.startswith("Abstract:"))
     assert len(abstract.split())-1<250
-    assert len(doc.tables)==10 and len(doc.inline_shapes)==11
+    assert len(doc.tables)==11 and len(doc.inline_shapes)==11
     numbers=[int(m[1]) for p in doc.paragraphs if (m:=re.match(r"^\[(\d+)\]",p.text))]
     assert numbers==list(range(1,32))
     ref_index=next(i for i,p in enumerate(doc.paragraphs) if p.text.lower()=="references")
@@ -56,7 +56,7 @@ def check_doc(path,discover):
     figures=[int(m[1]) for p in doc.paragraphs if (m:=re.match(r"^Fig\. (\d+)",p.text))]
     assert figures==list(range(1,12)),figures
     tables=[p.text for p in doc.paragraphs if p.style.name=='Caption' and re.match(r"^(?:TABLE [IVX]+\.|Table \d+ )",p.text)]
-    assert len(tables)==10
+    assert len(tables)==11
     assert not doc.element.xpath(".//w:pBdr") and not doc.styles.element.xpath(".//w:pBdr"),"title-rule residue"
     assert "\u2014" not in body,"em dash remains"
     for text in ("geometry remains fixed","same physical computer","independent","changesets","16,384","4,096","unpaired","recovery","author-confirmed declarations have not yet been supplied"):
@@ -72,7 +72,44 @@ def check_doc(path,discover):
         assert all(s._sectPr.find(qn("w:cols")) is None or s._sectPr.find(qn("w:cols")).get(qn("w:num"),"1")=="1" for s in doc.sections)
     else:
         assert any(s._sectPr.find(qn("w:cols")).get(qn("w:num"),"1")=="2" for s in doc.sections)
-    return doc,dict(path=str(path),paragraphs=len(doc.paragraphs),tables=10,figures=11,references=31,abstract_words=len(abstract.split())-1)
+    for token in ('714','546','three independent histories','Six spread cases','no new threshold','0.614','1.213','13.1-22.2%'):
+        assert token.lower() in body.lower(),token
+    assert [[c.text for c in row.cells] for row in doc.tables[-1].rows][0]==['Rows / history / locality','Operations','Seed 21','Seed 22','Seed 23']
+    return doc,dict(path=str(path),paragraphs=len(doc.paragraphs),tables=11,figures=11,references=31,abstract_words=len(abstract.split())-1)
+
+def check_pilot():
+    directory=ROOT/'evidence/threshold-robustness-pilot-20261002'
+    inventory=json.loads((directory/'publication_inventory.json').read_text())
+    for name,digest in inventory['files'].items():
+        assert hashlib.sha256((directory/name).read_bytes()).hexdigest()==digest,name
+    manifest=json.loads((directory/'manifest.json').read_text())
+    for name,digest in manifest['source_sha256'].items():
+        assert hashlib.sha256((directory/'source'/name).read_bytes()).hexdigest()==digest,name
+    results=json.loads((directory/'results.json').read_text())
+    assert len(results)==12
+    with (directory/'raw_results.csv').open(newline='') as f:raw=list(csv.DictReader(f))
+    with (directory/'summary.csv').open(newline='') as f:summary=list(csv.DictReader(f))
+    assert len(raw)==714 and sum(r['trial_kind']=='measured' for r in raw)==546
+    assert all(r['correctness']=='True' for r in raw)
+    assert all(r['selected']==('log' if int(r['operations'])<=int(r['threshold']) else 'merkle') for r in raw if r['strategy']=='hybrid')
+    for name in {r['case'] for r in raw}:
+        assert len({r['output_sha256'] for r in raw if r['case']==name})==1
+    for row in summary:
+        measurements=[float(r['diff_ms']) for r in raw if r['trial_kind']=='measured' and all(r[k]==row[k] for k in ('case','cache_condition','strategy','threshold'))]
+        assert len(measurements)==(5 if row['cache_condition']=='warmed-built' else 3)
+        assert abs(statistics.median(measurements)-float(row['median_ms']))<1e-8
+    ratios=json.loads((directory/'paired_ratios.json').read_text())
+    for row in ratios:
+        medians={r['strategy']:float(r['median_ms']) for r in summary if r['case']==row['case'] and r['cache_condition']==row['cache_condition'] and r['strategy'] in ('log','merkle')}
+        assert abs(row['log_over_merkle']-medians['log']/medians['merkle'])<1e-10
+    manuscript=Document(ROOT/'paper/Revon_Research_Paper_IEEE.docx')
+    for table_row,(locality,operations) in zip(manuscript.tables[-1].rows[1:],[('repeated-key',32768),('repeated-key',65536),('repeated-key',131072),('spread',65536)]):
+        samples=sorted((r for r in ratios if r['cache_condition']=='warmed-built' and r['locality']==locality and r['operations']==operations),key=lambda r:r['seed'])
+        assert [r['seed'] for r in samples]==[20261021,20261022,20261023]
+        assert [c.text for c in table_row.cells][2:]==[f"{r['log_over_merkle']:.3f}" for r in samples]
+    exclusions=json.loads((directory/'failures.json').read_text())
+    assert len(exclusions)==6 and all(r['status']=='not_run_resource_scope_reduction' for r in exclusions)
+    return dict(repositories=12,timed_queries=714,measured_queries=546,seeds=3,resource_exclusions=6,failures=0,raw_summary_agreement=True,table_ratios_verified=True)
 
 def check_evidence():
     # Retain the existing publication gate for supplemental process telemetry.
@@ -181,7 +218,7 @@ def main():
     assert content(ieee)==content(discover),'journal and IEEE scientific content differs'
     source=ROOT/'paper/older versions/sources/Revon_Reviewed_Public_Dataset_Manuscript.docx'
     assert hashlib.sha256(source.read_bytes()).hexdigest()=='22b8c68e42f2f305c1c43d095dbe719556ababa95c38722fed184c85d871b8d3','archived authoritative source changed'
-    evidence=check_evidence()
+    evidence=check_evidence();evidence['robustness_pilot']=check_pilot()
     ieee_render='render-ieee-word' if root and (root/'render-ieee-word/Revon_Research_Paper_IEEE.pdf').exists() else 'render-ieee'
     paths=[root/ieee_render/'Revon_Research_Paper_IEEE.pdf',root/'render-discover/Revon_Research_Paper_Discover_Computing.pdf'] if root else [ROOT/'paper/Revon_Research_Paper_IEEE.pdf',ROOT/'paper/Revon_Research_Paper_Discover_Computing.pdf']
     pdfs=[check_pdf(p) for p in paths]

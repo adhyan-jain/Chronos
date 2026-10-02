@@ -5,6 +5,7 @@ The original source is backed up once before any replacement.
 """
 from __future__ import annotations
 import copy
+import argparse
 import csv
 import hashlib
 import json
@@ -33,6 +34,7 @@ PRIMARY=ROOT/"evidence/paper-corrected-issues13-17-counterbalanced-final-2026092
 PUBLIC=ROOT/"evidence/public-tlc-combined-20261002"
 THRESH=ROOT/"evidence/threshold-heldout-20261002"
 EXTENSION=ROOT/"evidence/crossover-diagnostic-20261002"
+PILOT=ROOT/"evidence/threshold-robustness-pilot-20261002"
 TEAL,BLUE,ORANGE,INK="#006D77","#305B93","#A64B2A","#202D36"
 
 def csv_rows(path):
@@ -84,6 +86,8 @@ def analyze():
     crossover=[int(r["operations"]) for r in measured if float(r["median_ms"])>float(next(x for x in diagnostic if x["scenario"]==r["scenario"] and x["strategy"]=="merkle")["median_ms"])]
     result=dict(primary=primary,public=pub,scores=scores,frozen_threshold=frozen["threshold"],threshold_best=best,diagnostic_first_merkle_faster=min(crossover) if crossover else None,
                 diagnostic_ratios=[dict(operations=int(r["operations"]),log_over_merkle=float(r["median_ms"])/float(next(x for x in diagnostic if x["scenario"]==r["scenario"] and x["strategy"]=="merkle")["median_ms"])) for r in measured])
+    assert json.loads((PILOT/'independent_audit.json').read_text())['passed']
+    result['pilot_ratios']=json.loads((PILOT/'paired_ratios.json').read_text())
     AUDIT.mkdir(parents=True,exist_ok=True);(AUDIT/"analysis.json").write_text(json.dumps(result,indent=2))
     return result,lookup,threshold,diagnostic
 
@@ -236,6 +240,7 @@ def blocks(source,data):
     p(TITLE,"title")
     for i in range(1,6):p(ps[i],"author")
     p("Abstract: Revon is a Python prototype for durable, linear-history key/value versioning using a fixed-depth Merkle hash trie. Its hybrid variant chooses between changeset aggregation and hash-pruned comparison; trie geometry does not adapt. We make forced-Merkle Revon-M the primary ablation because both variants retain the same persistent representation and changesets. On eight synthetic workloads, five paired diff-latency intervals favour Revon-H and three include parity. A separate three-seed study also leaves the 50-commit result inconclusive. Public NYC TLC records extend evaluation to one million records with generated corrections; Revon-H has no consistent advantage when both variants choose Merkle comparison. A supplemental study tests five thresholds on disjoint calibration and validation workloads, with seven measured cached queries per configuration. Calibration selects 16,384 operations, while the original workflow results retain their frozen 4,096 threshold. No forced-path crossover appears through 32,768 operations in the main supplement; a separate long-history diagnostic investigates larger counts. Revon-H and Revon-M have nearly equal repository footprints, whereas both use more storage than Dolt in the measured workflows. All measurements use one physical computer, including WSL2. The evidence supports workload-dependent differencing choices, not general efficiency or production-system superiority.","abstract")
+    out[-1]['text']=out[-1]['text'].replace("a separate long-history diagnostic investigates larger counts.","separate exploratory diagnostics investigate larger counts. A three-seed pilot finds different preferred paths at the same operation count across two workload profiles.")
     p(ps[8].replace("Index Terms:","Keywords:"),"keywords")
     span(9,10)
     p("Revon asks whether a fixed-depth Merkle hash trie can combine incremental structural sharing with an operation index. Revon-H adapts only its diff path: it selects log aggregation for eligible intervals within an operation threshold and Merkle comparison otherwise. The trie geometry remains fixed. SQLite supplies atomic, durable storage. The title's efficiency claim is restricted to the measured operations and workloads; it does not assert that all structured-data management becomes cheaper.")
@@ -258,6 +263,7 @@ def blocks(source,data):
         ["WSL sensitivity","Same computer; Linux 6.6.87.2-microsoft-standard-WSL2; Python 3.14.4","Operating-environment comparison, not independent hardware"],
         ["Public TLC","Same Windows host; Python 3.12.14; pyarrow 25.0.1; psutil 7.2.2; Dolt 2.3.1","325 attempts; 324 successful; 1 interrupted attempt retained; recovery outside block"],
         ["Threshold supplement","Same Windows host; Python 3.14.3; 10k/100k rows; b8-d4","42 repositories; 2 warm-up and 7 measured queries per path/threshold"],
+        ["Threshold robustness pilot","Same Windows host; Python 3.14.3; psutil 7.1.0; three new seeds","12 repositories; 714 queries, including 546 measured; exploratory, separate from held-out selection"],
         ["Physical host","Intel Core i7-1255U; 10 cores/12 logical CPUs; 15.64 GiB RAM; C: NTFS","CPU model/filesystem verified for this revision; historical manifests contain processor family"],
         ["Independent Linux host","Not available to this revision","Independent replication remains uncompleted"]],widths=[.20,.40,.40])
     p("These bundles share a physical host but differ in runtime, workloads and protocol. Results are not pooled across them. The public-data run started with 4.14 GiB available RAM; available memory was not controlled. The current CPU model and filesystem were inspected during revision, not retrospectively recorded for each historical trial. Recorded versions in each manifest remain authoritative.")
@@ -280,6 +286,10 @@ def blocks(source,data):
     fig(11,"Exploratory long-history diagnostic, 10k rows and 256 repeated-key commits; medians and IQRs. This extension does not alter the frozen threshold")
     first=data["diagnostic_first_merkle_faster"]
     p("The diagnostic median log/Merkle ratios are "+", ".join(f"{r['log_over_merkle']:.2f} at {r['operations']:,}" for r in data["diagnostic_ratios"])+" operations. Merkle first has the lower sampled median at 32,768, log is lower again at 65,536, and Merkle is lower at 131,072. This non-monotonic ordering is not a resolved single crossover or an optimal switching rule; IQRs and raw queries are retained, and only one seed was used." if first else "The diagnostic still does not demonstrate a forced-path crossover within its tested range.")
+    p("F. Exploratory threshold robustness pilot","h2")
+    p("A separate pilot freezes thresholds 4,096, 16,384, 32,768, 65,536 and 131,072, with forced log (always-log) and forced Merkle baselines. Three new seeds, 20261021-20261023, generate independent histories for each condition. Profiles are 10k rows/256 commits/repeated-key and 100k rows/64 commits/spread, sampled at 32,768, 65,536 and 131,072 operations. A predeclared wall-time rule reduces the initial 18 cases to all nine repeated-key cases and three spread cases at 65,536, before latency trends are inspected. Six spread cases at the other counts are not run; no failed or unfavourable result is discarded. The retained 12 repositories take 28.3 minutes and reach 1,214 MiB sampled worker RSS.")
+    p("Each repository uses two warm-up and five measured randomized query blocks for seven configurations. Both profiles at 65,536 also use three blocks with a separate reopened process for each configuration. The 588 warmed queries include 420 measured queries; all 126 fresh-process queries are measured. All 714 timed queries match the common canonical semantic oracle, and reverse/identity, representative checkout, persistent-integrity and reopen checks pass. Timers include semantic output materialization; separate decision probes are not subtracted. Each commit has one insert and one delete, with the remaining mutations being updates. Actual distinct keys, output sizes, work counters and mutation counts are retained. Query repeats are nested within three independent histories per condition; no population confidence interval is claimed.")
+    p("Reopening eagerly loads and verifies the persistent object model before diff timing; open latency is separate and the OS filesystem cache is not cleared. Warmed workers use the workload seed as Python hash seed, while fresh workers use workload seed plus block. Both paths share a hash seed within each fresh block, but warmed/fresh comparisons do not isolate caching alone. This pilot neither recalibrates T nor reuses held-out results to select a new threshold. Its five warmed and three fresh query blocks differ from the earlier protocols; the bundles remain separate.")
     p("V. RESULTS","h1");p("A. Primary hybrid ablation","h2")
     p("Revon-M versus Revon-H is the central ablation: both use the same persistent trie and addressed changesets, and the requested diff strategy changes. Table VI reports all eight primary workloads; Table VII reports the separate public-record sweep. Figure 5 displays medians and IQRs. These measurements isolate diff-path selection more directly than cross-system workflows, although run order, runtime effects and the common output contract still affect observed latency.")
     fig(5,"Revon-M and Revon-H ablation; primary synthetic workloads and public TLC workloads are separate panels. Points show medians and bars show IQRs")
@@ -305,22 +315,37 @@ def blocks(source,data):
     fig(10,"Public-record scalability for ten generated commits and 0.1% updates per commit; medians and IQRs from seven successful measured trials. Both axes are logarithmic. H uses log diff at 10k/100k and Merkle diff at 1M")
     span(97,100);original_table(4,10,"Public history and density results at 100k records; median commit and diff times in ms and footprint in MiB")
     p(ps[102])
+    p("F. Exploratory pilot results","h2")
+    pilot=data['pilot_ratios']
+    pilot_rows=[]
+    for locality,operations in [('repeated-key',32768),('repeated-key',65536),('repeated-key',131072),('spread',65536)]:
+        rows=sorted((r for r in pilot if r['cache_condition']=='warmed-built' and r['locality']==locality and r['operations']==operations),key=lambda r:r['seed'])
+        assert [r['seed'] for r in rows]==[20261021,20261022,20261023]
+        profile='10k / H256 / repeated-key' if locality=='repeated-key' else '100k / H64 / spread'
+        pilot_rows.append([profile,f'{operations:,}']+[f"{r['log_over_merkle']:.3f}" for r in rows])
+    tab(11,"Exploratory pilot log/Merkle ratios of warmed-query medians; below one favours log. Seed suffixes 21-23 denote 20261021-20261023",['Rows / history / locality','Operations','Seed 21','Seed 22','Seed 23'],pilot_rows,widths=[.38,.17,.15,.15,.15])
+    p("All three seeds favour log at 32,768 repeated-key operations and Merkle at 65,536 and 131,072. The earlier single-seed diagnostic's opposite preferences at 32,768 and 65,536 are not reproduced; those original measurements remain reported separately. At 65,536 operations, all three spread histories favour log instead. Reopened measurements retain the profile contrast for all three seeds: log/Merkle median ratios are 1.198-1.410 for repeated-key and 0.709-0.734 for spread. These profiles differ in row count and history length as well as locality, so the contrast does not isolate a causal locality effect or establish an exact crossover.")
+    p("Relative to T=16,384, T=131,072 lowers warmed spread median latency by 13.1-22.2%, but raises repeated-key latency by 12.3-19.7% at 65,536 and 36.0-53.5% at 131,072 operations. These ranges describe three seed-specific differences, not confidence intervals. Same-path selector/forced median ratios across retained conditions range from 0.614 to 1.213, exposing substantial timing variability. Small differences among thresholds selecting the same algorithm cannot therefore be treated as algorithmic gains. Neither always-log nor simply increasing T is consistently best across these profiles. No new threshold is selected and no production default is changed.")
     p("VI. DISCUSSION","h1")
     p("For RQ1, the public-record study shows a material scale cost: at one million records, H's 4,764.26 ms commit median exceeds the other measured workflows, and its 1,446.69 MiB footprint is 10.90 times Dolt SQL's. Lower diff latency in selected workflows does not establish general efficiency. Interface-level Dolt ratios do not establish an intrinsically faster trie.")
     p("For RQ2, adaptive differencing helps selected sparse and repeated-key workloads without changing their version semantics. M/H footprints are nearly equal because the representations are shared. Dense and long histories do not consistently favour H. The new threshold supplement shows that 4,096 is a conservative frozen rule for earlier results, not a measured universal crossover; 16,384 is the best sampled candidate in a distinct cached-query protocol.")
+    p("The separate pilot strengthens the case for investigating workload-sensitive selection: one operation count corresponds to different preferred paths across the retained profiles. It also shows why a larger threshold alone is insufficient. The single-seed reversal does not repeat under the new histories, but three histories and confounded profiles cannot resolve its cause or validate a replacement selector. The frozen 16,384 candidate choice and original 4,096 workflow settings remain unchanged.")
     p(ps[106].replace("the results rule out one trie geometry as best for every workload", "the sampled geometries trade latency against storage; no universal optimum is established"));p(ps[107]);p(ps[108].replace("Figure 7 and Table V","Figure 10 and Table X"))
     p("VII. LIMITATIONS AND THREATS TO VALIDITY","h1")
     p("Runtime and interfaces: Revon runs in-process in Python, while Dolt is a Go executable reached through CLI/SQL. The measured workflows differ in schema and feature costs. Revon supports one writer and linear history; SQL, branching, merging, remotes, schema evolution, ordered range scans and concurrent workloads are not evaluated.")
     p(ps[112])
     p("Environment and replication: Windows and WSL2 measurements use the same physical computer. No independent Linux machine was available to this revision, and no external researcher or clean clone has reproduced the timings. The internal audit checks evidence consistency; it does not reproduce wall-clock performance. Broader hardware claims remain unsupported.")
     p("Calibration: the five-candidate, predefined held-out supplement studies cached queries on synthetic workloads with one seed per profile and one repository per operation count. The largest tested candidate wins, so the search does not establish an optimum. The long-history extension is exploratory and excluded from selection. Query repetitions do not supply independent dataset or repository replications. The fixed-depth trie does not adapt its geometry.")
+    p("Pilot scope: only three independent histories per retained condition are measured. Six planned spread cases are omitted by the predeclared resource rule. Row count, history length and locality vary together; background resource conditions are not controlled. Fresh-process hash seeds differ from warmed seeds, and eager reopen plus an uncleared OS cache is not cold storage. Large same-path timing variation prevents causal claims about selector overhead or small candidate differences. The pilot is exploratory and supplies no new calibration/held-out selection or independent Linux replication.")
     p(ps[115]);p(ps[116]);p(ps[117])
     p("Storage and scope: both M and H retain changesets. Canonical payload accounting excludes allocated index and page costs, and comparing roots does not itself explain the repository footprint. Here, adaptive refers solely to diff-path selection; the geometry is fixed. The results cover selected versioning operations on a prototype and do not establish general efficiency across structured-data management.")
     p("VIII. FUTURE WORK","h1")
     p("Priority work is independent hardware replication and additional public datasets with observed histories. Threshold calibration should test a wider candidate range, multiple seeds per profile, different output sizes, and cold-storage behaviour before deployment. A future selector could use measured prefix density and I/O as well as operation count; none of that richer classification exists in the present implementation.")
+    p("A focused follow-up should hold row count and history length constant while varying locality and update density, fix Python hash seeds across process conditions, and record GC and resource behaviour. Independent histories should be the uncertainty unit. More seeds, fresh calibration and untouched validation workloads are needed before adopting a richer selector; the present pilot does not justify changing T.")
     p(ps[120]);p("Named branches, merge commits, conflict reporting, schema-aware records, concurrency and ordered queries require implementation and separate correctness/performance studies. They are future capabilities rather than demonstrated properties.")
     p("IX. CONCLUSION","h1")
     p("Revon combines immutable objects, incremental trie updates, SQLite persistence, historical checkout and adaptive log/Merkle differencing. A prominent same-representation ablation supports advantages for selected sparse and repeated-key intervals, with dense and long-history qualifications retained. Public records reach one million rows using generated corrections and expose substantial commit and storage costs. New calibration and held-out measurements improve threshold evidence without rewriting earlier results or establishing a universal optimum. The contribution is a reproducible comparison of diff choices in a single-writer prototype; independent hardware validation remains uncompleted.")
+    out[-1]['text']=out[-1]['text'].replace("The contribution is", "A separate three-seed pilot finds profile-dependent path preferences and opposing effects from increasing the threshold, without validating a new optimum. The contribution is")
     p("DECLARATIONS","h1")
     p("Funding: the funding statement must be confirmed by the authors before submission.")
     p("Competing interests and author contributions: author-confirmed declarations have not yet been supplied for this revision. Names, affiliations and contact details are preserved from the reviewed manuscript.")
@@ -343,8 +368,9 @@ def blocks(source,data):
             text+=" Open copy: "+URLS[number]+"."
         p(text,"reference")
     p("APPENDIX A. REPRODUCIBILITY AND DATA AVAILABILITY","h1")
-    p("The primary synthetic evidence is evidence/paper-corrected-issues13-17-counterbalanced-final-20260923, with paired_ratio_uncertainty.csv. Separate robustness, WSL and telemetry bundles are evidence/paper-issues18-20-robustness-20260923, evidence/paper-issues18-20-linux-wsl-20260923 and evidence/paper-issues14-windows-telemetry-20260924. Trie sensitivity is evidence/trie-sensitivity-issues8-20260923. Public TLC analysis is evidence/public-tlc-combined-20261002, referring to its original execution and isolated recovery parents. Pilots are excluded. Local revision evidence is not yet a public release.")
+    p("The primary synthetic evidence is evidence/paper-corrected-issues13-17-counterbalanced-final-20260923, with paired_ratio_uncertainty.csv. Separate robustness, WSL and telemetry bundles are evidence/paper-issues18-20-robustness-20260923, evidence/paper-issues18-20-linux-wsl-20260923 and evidence/paper-issues14-windows-telemetry-20260924. Trie sensitivity is evidence/trie-sensitivity-issues8-20260923. Public TLC analysis is evidence/public-tlc-combined-20261002, referring to its original execution and isolated recovery parents. TLC preparation pilots are excluded. Local revision evidence is not yet a public release.")
     p("New held-out threshold evidence is evidence/threshold-heldout-20261002. Reproduce with Python 3.14: python -m experiments.threshold_validation --output <new-directory>. The diagnostic extension is evidence/crossover-diagnostic-20261002, reproduced with python -m experiments.crossover_extension --output <new-directory>. Each bundle archives exact source files and hashes, workloads, raw query records, selection, summaries and correctness checks. The pilot at evidence/threshold-pilot-20261002 is excluded. Working databases are reproducible and removed after verified reopen checks; payload accounting and integrity counts are retained.")
+    p("The separate robustness pilot is evidence/threshold-robustness-pilot-20261002. It retains the frozen manifest and source hashes, raw timings, seed-specific ratios, resource exclusions and semantic checks. It is not the earlier excluded threshold-pilot bundle. Reproduction commands and process/cache qualifications are in docs/experiments/THRESHOLD_ROBUSTNESS_PILOT.md. Public release of this new bundle is pending; it is reported only as exploratory evidence, separate from original and held-out results.")
     # Put reproducibility before declarations and references so an internal
     # report paragraph does not become a sparse final manuscript page.
     appendix_index=next(i for i,b in enumerate(out) if b.get('text','').startswith('APPENDIX A.'))
@@ -363,6 +389,7 @@ def blocks(source,data):
         if "text" in b:b["text"]=re.sub(r"Figure (\d+)",lambda m:"Figure "+str(remap.get(int(m[1]),int(m[1]))),b["text"])
     table_mentions={1:"Table I compares the related systems and the scope addressed by Revon.",2:"Table II separates the environments and measurement scopes of the retained evidence bundles.",3:"Table III defines the primary synthetic workload matrix.",4:"Table IV summarizes the public dataset mapping and generated history sweeps.",5:"Table V compares the predefined threshold candidates using calibration and held-out scores.",8:"Table VIII reports the paired workflow comparison with Dolt.",10:"Table X reports public-record history and density results at 100,000 records."}
     figure_mentions={1:"Figure 1 summarizes the architecture and implemented research scope.",2:"Figure 2 shows the implemented version-pair decision, including eligibility and reverse handling.",3:"Figure 3 compares forced-path latency across the predefined calibration and validation profiles.",4:"Figure 4 shows how changing the threshold affects selector latency in held-out workloads.",5:"Figure 5 examines the separate long-history diagnostic without changing the calibrated choice.",6:"Figure 6 compares both variants across synthetic and public-record workloads.",7:"Figure 7 compares the complete Revon-H and Dolt diff workflows.",8:"Figure 8 places measured diff latency against repository footprint for each variant.",9:"Figure 9 reports commit and checkout workflow latency separately from diff latency.",10:"Figure 10 examines the measured latency and footprint of alternative fixed geometries.",11:"Figure 11 reports the separate public-record scalability sweep."}
+    table_mentions[11]="Table XI reports all three seed-specific forced-path ratios for each retained warmed pilot condition."
     expanded=[]
     for b in out:
         mention=table_mentions.get(b.get("number")) if b["kind"]=="table" else figure_mentions.get(b.get("number")) if b["kind"]=="figure" else None
@@ -414,7 +441,7 @@ def sanitize(doc,font):
                 if "Theme" in key or "theme" in key:del fonts.attrib[key]
             fonts.set(qn("w:ascii"),font);fonts.set(qn("w:hAnsi"),font);fonts.set(qn("w:eastAsia"),font);fonts.set(qn("w:cs"),font)
 
-ROMAN={1:"I",2:"II",3:"III",4:"IV",5:"V",6:"VI",7:"VII",8:"VIII",9:"IX",10:"X"}
+ROMAN={1:"I",2:"II",3:"III",4:"IV",5:"V",6:"VI",7:"VII",8:"VIII",9:"IX",10:"X",11:"XI"}
 
 def add_table(doc,block,ieee):
     size=8.5 if ieee else 12;full=7 if ieee else 6.76
@@ -444,7 +471,7 @@ def add_table(doc,block,ieee):
                 p.paragraph_format.space_after=Pt(3);p.paragraph_format.space_before=Pt(2);p.paragraph_format.line_spacing=1.04
                 # A short table stays intact; long journal tables may continue
                 # with repeated headers, but never strand the last data row.
-                short_table=(ieee and len(block['rows'])<=18) or (not ieee and block['number'] in (1,2,3,4,5,10) and len(block['rows'])<=24)
+                short_table=(ieee and len(block['rows'])<=18) or (not ieee and block['number'] in (1,2,3,4,5,10,11) and len(block['rows'])<=24)
                 p.paragraph_format.keep_with_next=i<len(block['rows']) if short_table else (i==0 or i==len(block['rows'])-1)
                 p.paragraph_format.widow_control=True
                 for r in p.runs:r.font.name="Times New Roman" if ieee else "Arial";r.font.size=Pt(size);r.bold=i==0
@@ -577,6 +604,7 @@ def audit_document(data):
     path=ROOT/"output/docs/Revon_Seven_Revision_Detailed_Audit.docx";sanitize(doc,"Arial");doc.save(path)
 
 def main():
+    parser=argparse.ArgumentParser();parser.add_argument('--manuscripts-only',action='store_true');args=parser.parse_args()
     WORK.mkdir(parents=True,exist_ok=True)
     backup=WORK/"originals";backup.mkdir(exist_ok=True)
     original=ROOT/"paper/older versions/sources/Revon_Reviewed_Public_Dataset_Manuscript.docx"
@@ -593,7 +621,7 @@ def main():
     content=blocks(source,data);(AUDIT/"manuscript_model.json").write_text(json.dumps(content,indent=2),encoding="utf-8")
     build_doc(content,assets,ROOT/"paper/Revon_Research_Paper_Discover_Computing.docx",False)
     build_doc(content,assets,ROOT/"paper/Revon_Research_Paper_IEEE.docx",True)
-    report(data);audit_document(data)
+    if not args.manuscripts_only:report(data);audit_document(data)
     print(json.dumps(dict(title=TITLE,blocks=len(content),figures=len(assets),tables=sum(b['kind']=='table' for b in content),frozen_threshold=data['frozen_threshold']),indent=2))
 
 if __name__=="__main__":main()
