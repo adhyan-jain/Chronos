@@ -1,0 +1,8 @@
+{
+  "created_utc": "2026-10-02T08:06:57.127774+00:00",
+  "first_case_wall_seconds": 143.9039990999736,
+  "first_case_peak_rss_bytes": 612540416,
+  "conservative_estimated_full_seconds": 2590.2719837995246,
+  "reduce_scope": true,
+  "decision_basis": "wall time and process RSS only; no query-latency trend inspected"
+}

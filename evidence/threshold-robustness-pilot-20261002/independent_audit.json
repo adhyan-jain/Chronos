@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "complete_repositories": 12,
+  "queries": 714,
+  "protected_files": 700,
+  "raw_summary_agreement": true,
+  "all_paths_match_oracle": true,
+  "randomized_block_orders_valid": true,
+  "manifest_sources_unchanged": true,
+  "manuscript_production_prior_evidence_unchanged": true,
+  "commits_unchanged": true
+}

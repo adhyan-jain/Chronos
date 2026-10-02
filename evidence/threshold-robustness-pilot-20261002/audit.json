@@ -1,0 +1,12 @@
+{
+  "completed_cases": 12,
+  "planned_cases": 18,
+  "warm_queries": 588,
+  "warm_measured": 420,
+  "fresh_queries": 126,
+  "all_correct": true,
+  "failures": 0,
+  "not_run": 6,
+  "finished_utc": "2026-10-02T08:32:51.218393+00:00",
+  "source_unchanged": true
+}

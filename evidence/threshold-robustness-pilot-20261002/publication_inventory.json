@@ -1,0 +1,31 @@
+{
+  "origin": "C:\\Users\\admin\\Desktop\\Revon\\.codex_tmp\\threshold_robustness_pilot\\20261002-132649",
+  "purpose": "Byte-for-byte publication copy of completed exploratory pilot; original audits predate paper revision",
+  "files": {
+    "ASSESSMENT.md": "38b5fb5d3745bad53f028c146bd3c61a6ddb182244b8f6a60dccfa0b8d54fb97",
+    "audit.json": "46ac24b95612931eaa81cacc05ac275ed79a2ebb7784b43729918b8427e50ecc",
+    "cache_sensitivity.png": "f24e499054f49235c35d2e32bf9e41577e34a42eb1d6aaba4140dd95290f6a2e",
+    "failures.json": "fd1732140b746198f0e8a01e0cd1f64239cae20f87c4aadc74015f1da50aa703",
+    "forced_path_ratios.png": "3fa3d5df97c04cb4caaebf3d87dd579dc72d76f531df5dee71ac37978bdefd6c",
+    "independent_audit.json": "0b2fe814518d6dd3195c283a61fae2e0e2441ae676cd6bcd7ef6d60218c48c2c",
+    "manifest.json": "fc4687783c702780555db822c1e988f784e05ba98fa3862590b25b7fd9bd99d2",
+    "paired_ratios.json": "42aa27f7f7d8cbe8738ff0ef46af5c6ba0513506c4ac2737d44bacca6d26ed80",
+    "prepare_reproduction.py": "07f0ac158633f710e4dcf3c76755982e7ea49fcd5ef2b1840eff68b8c82c9183",
+    "protected_after.json": "156e4033b99ae99b17e42a3659c9cf48ec12e0864707b0bc1d81fed604cfdf10",
+    "protected_before.json": "e64bb9b01a64145e219ab9e4d735d05af5119ddde4fd0b7116061288ac648a92",
+    "raw_results.csv": "7dd2e0a16c3e9bc9837ef0aa2ff19e2aeb73188547894aa6bd9fc0d7ec429360",
+    "resource_gate.json": "bebf2d81e2323434c829e90322ccaa93f8d11e933ae3c84e96257d86833b8fd3",
+    "results.json": "e87ca849d9d530dc017f339c5f399903b732aaab371d58256f9966009e2a0815",
+    "selector_vs_always_log.png": "473a117135b2a68e70ed251fd446b0f4936780eb7a9b2f4ae825f816144dbf57",
+    "summary.csv": "6be94493142670d8734f9a12170416d4145c2e8cdbc387bb6945060e61c1f2dc",
+    "SUMMARY.md": "95ef7c677570df8e16a76da3d69dbe83ebcc90efccb958201db682731832f49b",
+    "verify_pilot_results.py": "f5ae8de63265c9b3a14999478e5d6a33aa47a8c75e6ae8af40ef738f6ec8eb6b",
+    "source/sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "source/versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835",
+    "source/experiments/adapters.py": "ae619430111dfe8b121fdff528b0bfb687db6d6a60ecf83ac3011ca98fdc74ff",
+    "source/experiments/analyze_threshold_robustness_pilot.py": "ae1fcf3d32240040ea8d2aadb0943dbda74363c6f7980db63ca6a863c29d2305",
+    "source/experiments/threshold_robustness_pilot.py": "7a61645db6440239e7d57e07041b60dcaffff7e64cb8eb19ce8dad956e4d09f6",
+    "source/experiments/threshold_validation.py": "c9cf9726df8de7247f9edaf064c118b894d1c1b460973558e033850a840de4a3",
+    "source/experiments/workloads.py": "8ea87cd780a7ef3c2708bc8613895e1792e2d446101d73a6b7c726cdc5fdb64c"
+  }
+}

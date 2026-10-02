@@ -1,0 +1,674 @@
+[
+  {
+    "case": "n10000-h256-repeated-key-o65536-s20261021",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261021,
+    "operations": 65536,
+    "cache_condition": "warmed-built",
+    "log_ms": 14.9637,
+    "merkle_ms": 12.8185,
+    "log_over_merkle": 1.1673518742442563,
+    "paired_block_ratios": [
+      1.1873449029901475,
+      0.9918651777123364,
+      1.1673518742442563,
+      1.2811669059492155,
+      1.305470406233885
+    ],
+    "median_paired_block_ratio": 1.1873449029901475,
+    "hybrid_over_always_log": {
+      "4096": 0.9278387029945803,
+      "16384": 0.8546415659228668,
+      "32768": 0.97636279797109,
+      "65536": 1.0138134284969627,
+      "131072": 0.9601034503498467
+    },
+    "gain_H131072_vs_H16384": -0.12339896470293854,
+    "log_iqr_ms": [
+      14.4976,
+      15.081
+    ],
+    "merkle_iqr_ms": [
+      12.2101,
+      13.7188
+    ],
+    "distinct_keys_touched": 1021,
+    "final_diff_entries": 1021
+  },
+  {
+    "case": "n10000-h256-repeated-key-o65536-s20261021",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261021,
+    "operations": 65536,
+    "cache_condition": "fresh-process-reopened",
+    "log_ms": 17.4661,
+    "merkle_ms": 14.5766,
+    "log_over_merkle": 1.1982286678649343,
+    "paired_block_ratios": [
+      1.3080890057734584,
+      1.197666122415378,
+      1.7398766772590077
+    ],
+    "median_paired_block_ratio": 1.3080890057734584,
+    "hybrid_over_always_log": {
+      "4096": 0.8417906687812391,
+      "16384": 0.829858983974671,
+      "32768": 0.8871528274772273,
+      "65536": 0.9859499258563732,
+      "131072": 1.019964388157631
+    },
+    "gain_H131072_vs_H16384": -0.22908157633292858,
+    "log_iqr_ms": [
+      17.462,
+      18.28295
+    ],
+    "merkle_iqr_ms": [
+      12.307649999999999,
+      14.58895
+    ],
+    "distinct_keys_touched": 1021,
+    "final_diff_entries": 1021
+  },
+  {
+    "case": "n10000-h256-repeated-key-o65536-s20261022",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261022,
+    "operations": 65536,
+    "cache_condition": "warmed-built",
+    "log_ms": 16.0906,
+    "merkle_ms": 13.4438,
+    "log_over_merkle": 1.1968788586560346,
+    "paired_block_ratios": [
+      1.2510185041206654,
+      1.1380651301923992,
+      1.0495989901633287,
+      1.1219331360325238,
+      1.1934943989050717
+    ],
+    "median_paired_block_ratio": 1.1380651301923992,
+    "hybrid_over_always_log": {
+      "4096": 1.0134364162927423,
+      "16384": 0.886219283308267,
+      "32768": 0.9100344300398993,
+      "65536": 1.1783587933327533,
+      "131072": 1.0494636620138469
+    },
+    "gain_H131072_vs_H16384": -0.18420314450413056,
+    "log_iqr_ms": [
+      16.0451,
+      16.7398
+    ],
+    "merkle_iqr_ms": [
+      12.9922,
+      14.709
+    ],
+    "distinct_keys_touched": 1021,
+    "final_diff_entries": 1021
+  },
+  {
+    "case": "n10000-h256-repeated-key-o65536-s20261022",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261022,
+    "operations": 65536,
+    "cache_condition": "fresh-process-reopened",
+    "log_ms": 18.1706,
+    "merkle_ms": 14.8216,
+    "log_over_merkle": 1.2259540130620177,
+    "paired_block_ratios": [
+      1.2041947135117388,
+      1.2120682524647464,
+      1.2595131429805149
+    ],
+    "median_paired_block_ratio": 1.2120682524647464,
+    "hybrid_over_always_log": {
+      "4096": 0.8735814997853676,
+      "16384": 0.7976346405732336,
+      "32768": 0.7043906090057566,
+      "65536": 1.005030103573905,
+      "131072": 0.6136341122472565
+    },
+    "gain_H131072_vs_H16384": 0.23068271983992816,
+    "log_iqr_ms": [
+      17.887,
+      18.4193
+    ],
+    "merkle_iqr_ms": [
+      14.719999999999999,
+      14.906500000000001
+    ],
+    "distinct_keys_touched": 1021,
+    "final_diff_entries": 1021
+  },
+  {
+    "case": "n10000-h256-repeated-key-o65536-s20261023",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261023,
+    "operations": 65536,
+    "cache_condition": "warmed-built",
+    "log_ms": 14.2254,
+    "merkle_ms": 12.1133,
+    "log_over_merkle": 1.1743620648378228,
+    "paired_block_ratios": [
+      1.0759224635249374,
+      1.1646750430821757,
+      1.1743620648378228,
+      1.25624887917268,
+      1.1954565863093183
+    ],
+    "median_paired_block_ratio": 1.1743620648378228,
+    "hybrid_over_always_log": {
+      "4096": 0.8389641064574633,
+      "16384": 0.8751880439214362,
+      "32768": 0.9259212394730552,
+      "65536": 1.0108327358105924,
+      "131072": 1.0475557805052933
+    },
+    "gain_H131072_vs_H16384": -0.19694937308733396,
+    "log_iqr_ms": [
+      13.8453,
+      14.3955
+    ],
+    "merkle_iqr_ms": [
+      11.7101,
+      12.3601
+    ],
+    "distinct_keys_touched": 1022,
+    "final_diff_entries": 1022
+  },
+  {
+    "case": "n10000-h256-repeated-key-o65536-s20261023",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261023,
+    "operations": 65536,
+    "cache_condition": "fresh-process-reopened",
+    "log_ms": 19.3001,
+    "merkle_ms": 13.6888,
+    "log_over_merkle": 1.4099190579159604,
+    "paired_block_ratios": [
+      1.374717908148395,
+      1.3221419959445389,
+      1.5393022032610602
+    ],
+    "median_paired_block_ratio": 1.374717908148395,
+    "hybrid_over_always_log": {
+      "4096": 0.5478883529100885,
+      "16384": 0.7791203154387801,
+      "32768": 0.8092963248895083,
+      "65536": 0.8968813633089984,
+      "131072": 0.9217620634089978
+    },
+    "gain_H131072_vs_H16384": -0.18308051419489124,
+    "log_iqr_ms": [
+      17.9042,
+      20.185650000000003
+    ],
+    "merkle_iqr_ms": [
+      12.84865,
+      14.1432
+    ],
+    "distinct_keys_touched": 1022,
+    "final_diff_entries": 1022
+  },
+  {
+    "case": "n10000-h256-repeated-key-o32768-s20261021",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261021,
+    "operations": 32768,
+    "cache_condition": "warmed-built",
+    "log_ms": 8.0848,
+    "merkle_ms": 9.8987,
+    "log_over_merkle": 0.8167537151343105,
+    "paired_block_ratios": [
+      0.8375206733453423,
+      0.540081902012197,
+      0.8167537151343105,
+      0.8313732853698066,
+      0.8908604346237344
+    ],
+    "median_paired_block_ratio": 0.8313732853698066,
+    "hybrid_over_always_log": {
+      "4096": 1.2191148822481694,
+      "16384": 1.217309024341975,
+      "32768": 1.0004205422521275,
+      "65536": 1.0383435582822087,
+      "131072": 0.9945205818325747
+    },
+    "gain_H131072_vs_H16384": 0.18301716166922377,
+    "log_iqr_ms": [
+      7.9505,
+      8.2891
+    ],
+    "merkle_iqr_ms": [
+      9.4929,
+      10.1188
+    ],
+    "distinct_keys_touched": 767,
+    "final_diff_entries": 767
+  },
+  {
+    "case": "n10000-h256-repeated-key-o32768-s20261022",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261022,
+    "operations": 32768,
+    "cache_condition": "warmed-built",
+    "log_ms": 9.4078,
+    "merkle_ms": 11.6651,
+    "log_over_merkle": 0.8064911573839915,
+    "paired_block_ratios": [
+      0.7626509845607838,
+      0.9768242223247737,
+      0.8864492846193153,
+      0.9306600008402303,
+      0.8505609952353829
+    ],
+    "median_paired_block_ratio": 0.8864492846193153,
+    "hybrid_over_always_log": {
+      "4096": 1.0998107952975191,
+      "16384": 1.278779310784668,
+      "32768": 0.8774846404047706,
+      "65536": 0.9577053083611471,
+      "131072": 0.8969578434915708
+    },
+    "gain_H131072_vs_H16384": 0.2985827687959769,
+    "log_iqr_ms": [
+      8.8964,
+      11.1026
+    ],
+    "merkle_iqr_ms": [
+      11.0607,
+      12.5248
+    ],
+    "distinct_keys_touched": 767,
+    "final_diff_entries": 767
+  },
+  {
+    "case": "n10000-h256-repeated-key-o32768-s20261023",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261023,
+    "operations": 32768,
+    "cache_condition": "warmed-built",
+    "log_ms": 10.1086,
+    "merkle_ms": 13.7038,
+    "log_over_merkle": 0.7376494111122462,
+    "paired_block_ratios": [
+      0.7100074431909397,
+      0.9229040052720218,
+      0.6795606109497687,
+      0.5383835696276306,
+      1.0361594753762033
+    ],
+    "median_paired_block_ratio": 0.7100074431909397,
+    "hybrid_over_always_log": {
+      "4096": 1.3772827097718774,
+      "16384": 1.1842094849929765,
+      "32768": 0.994321666699642,
+      "65536": 0.9764457986269118,
+      "131072": 0.9585303602872801
+    },
+    "gain_H131072_vs_H16384": 0.19057365066370402,
+    "log_iqr_ms": [
+      9.7298,
+      11.3131
+    ],
+    "merkle_iqr_ms": [
+      13.657,
+      14.8752
+    ],
+    "distinct_keys_touched": 766,
+    "final_diff_entries": 766
+  },
+  {
+    "case": "n10000-h256-repeated-key-o131072-s20261021",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261021,
+    "operations": 131072,
+    "cache_condition": "warmed-built",
+    "log_ms": 27.31,
+    "merkle_ms": 18.1255,
+    "log_over_merkle": 1.5067170560812115,
+    "paired_block_ratios": [
+      1.3251385787468803,
+      1.459672836611404,
+      1.610715296782108,
+      1.4005306387996586,
+      1.859651190926745
+    ],
+    "median_paired_block_ratio": 1.459672836611404,
+    "hybrid_over_always_log": {
+      "4096": 0.6835994141340169,
+      "16384": 0.639637495422922,
+      "32768": 0.6107616257781033,
+      "65536": 0.6193006224826071,
+      "131072": 0.9676455510801905
+    },
+    "gain_H131072_vs_H16384": -0.5128030454818675,
+    "log_iqr_ms": [
+      26.4573,
+      27.5546
+    ],
+    "merkle_iqr_ms": [
+      16.9552,
+      19.0325
+    ],
+    "distinct_keys_touched": 1535,
+    "final_diff_entries": 1535
+  },
+  {
+    "case": "n10000-h256-repeated-key-o131072-s20261022",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261022,
+    "operations": 131072,
+    "cache_condition": "warmed-built",
+    "log_ms": 26.4936,
+    "merkle_ms": 18.2051,
+    "log_over_merkle": 1.455284508187266,
+    "paired_block_ratios": [
+      1.4339173151804248,
+      1.8863746449394527,
+      1.455284508187266,
+      1.5127724599238843,
+      1.6011753373954263
+    ],
+    "median_paired_block_ratio": 1.5127724599238843,
+    "hybrid_over_always_log": {
+      "4096": 0.6396073013859951,
+      "16384": 0.6735928677114473,
+      "32768": 0.6731021831687652,
+      "65536": 0.6830253344203884,
+      "131072": 1.0340308602832382
+    },
+    "gain_H131072_vs_H16384": -0.5350976975103525,
+    "log_iqr_ms": [
+      26.2345,
+      29.5894
+    ],
+    "merkle_iqr_ms": [
+      17.342,
+      18.2597
+    ],
+    "distinct_keys_touched": 1534,
+    "final_diff_entries": 1534
+  },
+  {
+    "case": "n10000-h256-repeated-key-o131072-s20261023",
+    "rows": 10000,
+    "commits": 256,
+    "locality": "repeated-key",
+    "seed": 20261023,
+    "operations": 131072,
+    "cache_condition": "warmed-built",
+    "log_ms": 26.5815,
+    "merkle_ms": 18.0146,
+    "log_over_merkle": 1.4755531624349136,
+    "paired_block_ratios": [
+      1.6598481231889688,
+      1.4740361068397971,
+      1.4130076546884964,
+      1.3855191106256983,
+      1.5531826476593131
+    ],
+    "median_paired_block_ratio": 1.4740361068397971,
+    "hybrid_over_always_log": {
+      "4096": 0.740970223651788,
+      "16384": 0.7446758083629592,
+      "32768": 0.6572917254481502,
+      "65536": 0.6892839004570848,
+      "131072": 1.0126516562270753
+    },
+    "gain_H131072_vs_H16384": -0.359855718226183,
+    "log_iqr_ms": [
+      25.8826,
+      27.6551
+    ],
+    "merkle_iqr_ms": [
+      17.559,
+      18.812
+    ],
+    "distinct_keys_touched": 1534,
+    "final_diff_entries": 1534
+  },
+  {
+    "case": "n100000-h64-spread-o65536-s20261021",
+    "rows": 100000,
+    "commits": 64,
+    "locality": "spread",
+    "seed": 20261021,
+    "operations": 65536,
+    "cache_condition": "warmed-built",
+    "log_ms": 315.2659,
+    "merkle_ms": 405.8883,
+    "log_over_merkle": 0.7767306916705901,
+    "paired_block_ratios": [
+      0.8709625928569689,
+      0.5748298426981365,
+      0.9851487669233335,
+      0.7569227629588725,
+      0.7223709084494429
+    ],
+    "median_paired_block_ratio": 0.7569227629588725,
+    "hybrid_over_always_log": {
+      "4096": 1.0976331407868722,
+      "16384": 1.2557536352647083,
+      "32768": 1.2893976164247387,
+      "65536": 1.0499416524273637,
+      "131072": 0.9770193985457989
+    },
+    "gain_H131072_vs_H16384": 0.2219657016243901,
+    "log_iqr_ms": [
+      311.0163,
+      315.3743
+    ],
+    "merkle_iqr_ms": [
+      371.1813,
+      416.51
+    ],
+    "distinct_keys_touched": 48246,
+    "final_diff_entries": 48246
+  },
+  {
+    "case": "n100000-h64-spread-o65536-s20261021",
+    "rows": 100000,
+    "commits": 64,
+    "locality": "spread",
+    "seed": 20261021,
+    "operations": 65536,
+    "cache_condition": "fresh-process-reopened",
+    "log_ms": 340.5693,
+    "merkle_ms": 465.5629,
+    "log_over_merkle": 0.731521562392536,
+    "paired_block_ratios": [
+      0.8363010379546616,
+      0.6967389368869384,
+      0.7275913806618004
+    ],
+    "median_paired_block_ratio": 0.7275913806618004,
+    "hybrid_over_always_log": {
+      "4096": 1.2809275527770707,
+      "16384": 1.3211725190732106,
+      "32768": 1.3302643544206714,
+      "65536": 1.0186267523232424,
+      "131072": 0.968178576283887
+    },
+    "gain_H131072_vs_H16384": 0.26718232304509737,
+    "log_iqr_ms": [
+      332.47255,
+      346.403
+    ],
+    "merkle_iqr_ms": [
+      443.37350000000004,
+      466.8203
+    ],
+    "distinct_keys_touched": 48246,
+    "final_diff_entries": 48246
+  },
+  {
+    "case": "n100000-h64-spread-o65536-s20261022",
+    "rows": 100000,
+    "commits": 64,
+    "locality": "spread",
+    "seed": 20261022,
+    "operations": 65536,
+    "cache_condition": "warmed-built",
+    "log_ms": 305.1704,
+    "merkle_ms": 410.4449,
+    "log_over_merkle": 0.7435112484038661,
+    "paired_block_ratios": [
+      0.7435112484038661,
+      0.44729390110084594,
+      0.9847310075962996,
+      0.7230988410660247,
+      0.8392433825434331
+    ],
+    "median_paired_block_ratio": 0.7435112484038661,
+    "hybrid_over_always_log": {
+      "4096": 1.2879001371037297,
+      "16384": 1.3189863761360867,
+      "32768": 1.2639066567399724,
+      "65536": 1.1546339356634852,
+      "131072": 1.1462124111643857
+    },
+    "gain_H131072_vs_H16384": 0.1309899541781735,
+    "log_iqr_ms": [
+      294.5345,
+      344.6786
+    ],
+    "merkle_iqr_ms": [
+      407.3226,
+      410.7016
+    ],
+    "distinct_keys_touched": 48293,
+    "final_diff_entries": 48293
+  },
+  {
+    "case": "n100000-h64-spread-o65536-s20261022",
+    "rows": 100000,
+    "commits": 64,
+    "locality": "spread",
+    "seed": 20261022,
+    "operations": 65536,
+    "cache_condition": "fresh-process-reopened",
+    "log_ms": 419.1889,
+    "merkle_ms": 571.2995,
+    "log_over_merkle": 0.7337463099477595,
+    "paired_block_ratios": [
+      0.8754910429702453,
+      0.7029165962861862,
+      0.7281674690559715
+    ],
+    "median_paired_block_ratio": 0.7281674690559715,
+    "hybrid_over_always_log": {
+      "4096": 1.3614966903942352,
+      "16384": 1.3150333894814485,
+      "32768": 1.196005667134793,
+      "65536": 1.0175216948731227,
+      "131072": 0.9730660807096754
+    },
+    "gain_H131072_vs_H16384": 0.26004458252320095,
+    "log_iqr_ms": [
+      410.38239999999996,
+      423.08815
+    ],
+    "merkle_iqr_ms": [
+      529.5056999999999,
+      573.488
+    ],
+    "distinct_keys_touched": 48293,
+    "final_diff_entries": 48293
+  },
+  {
+    "case": "n100000-h64-spread-o65536-s20261023",
+    "rows": 100000,
+    "commits": 64,
+    "locality": "spread",
+    "seed": 20261023,
+    "operations": 65536,
+    "cache_condition": "warmed-built",
+    "log_ms": 402.7845,
+    "merkle_ms": 473.8086,
+    "log_over_merkle": 0.850099597179114,
+    "paired_block_ratios": [
+      0.802487924480402,
+      0.5969740705865709,
+      0.8334659384250239,
+      0.8395254812644479,
+      1.3032127318921605
+    ],
+    "median_paired_block_ratio": 0.8334659384250239,
+    "hybrid_over_always_log": {
+      "4096": 1.1326337036306016,
+      "16384": 1.129029046549706,
+      "32768": 1.2188264444138244,
+      "65536": 0.9862616361851064,
+      "131072": 0.980168303397971
+    },
+    "gain_H131072_vs_H16384": 0.1318484618324488,
+    "log_iqr_ms": [
+      384.1248,
+      403.4029
+    ],
+    "merkle_iqr_ms": [
+      457.5499,
+      483.2645
+    ],
+    "distinct_keys_touched": 48162,
+    "final_diff_entries": 48162
+  },
+  {
+    "case": "n100000-h64-spread-o65536-s20261023",
+    "rows": 100000,
+    "commits": 64,
+    "locality": "spread",
+    "seed": 20261023,
+    "operations": 65536,
+    "cache_condition": "fresh-process-reopened",
+    "log_ms": 398.8179,
+    "merkle_ms": 562.2076,
+    "log_over_merkle": 0.7093783506306213,
+    "paired_block_ratios": [
+      0.697007119789914,
+      0.7092521040540909,
+      0.8189328026799338
+    ],
+    "median_paired_block_ratio": 0.7092521040540909,
+    "hybrid_over_always_log": {
+      "4096": 1.375273025608931,
+      "16384": 1.3419447823179451,
+      "32768": 1.344252853244551,
+      "65536": 1.009879195492479,
+      "131072": 1.0170844889359278
+    },
+    "gain_H131072_vs_H16384": 0.24208171428699554,
+    "log_iqr_ms": [
+      395.3403,
+      403.50329999999997
+    ],
+    "merkle_iqr_ms": [
+      524.60235,
+      568.86375
+    ],
+    "distinct_keys_touched": 48162,
+    "final_diff_entries": 48162
+  }
+]

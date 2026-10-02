@@ -1,0 +1,241 @@
+{
+  "study": "isolated threshold robustness pilot",
+  "frozen_utc": "2026-10-02T08:04:33.069495+00:00",
+  "profiles": [
+    [
+      10000,
+      256,
+      "repeated-key"
+    ],
+    [
+      100000,
+      64,
+      "spread"
+    ]
+  ],
+  "seeds": [
+    20261021,
+    20261022,
+    20261023
+  ],
+  "cases": [
+    {
+      "name": "n10000-h256-repeated-key-o65536-s20261021",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 65536,
+      "seed": 20261021
+    },
+    {
+      "name": "n10000-h256-repeated-key-o65536-s20261022",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 65536,
+      "seed": 20261022
+    },
+    {
+      "name": "n10000-h256-repeated-key-o65536-s20261023",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 65536,
+      "seed": 20261023
+    },
+    {
+      "name": "n10000-h256-repeated-key-o32768-s20261021",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 32768,
+      "seed": 20261021
+    },
+    {
+      "name": "n10000-h256-repeated-key-o32768-s20261022",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 32768,
+      "seed": 20261022
+    },
+    {
+      "name": "n10000-h256-repeated-key-o32768-s20261023",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 32768,
+      "seed": 20261023
+    },
+    {
+      "name": "n10000-h256-repeated-key-o131072-s20261021",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 131072,
+      "seed": 20261021
+    },
+    {
+      "name": "n10000-h256-repeated-key-o131072-s20261022",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 131072,
+      "seed": 20261022
+    },
+    {
+      "name": "n10000-h256-repeated-key-o131072-s20261023",
+      "rows": 10000,
+      "commits": 256,
+      "locality": "repeated-key",
+      "operations": 131072,
+      "seed": 20261023
+    },
+    {
+      "name": "n100000-h64-spread-o65536-s20261021",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 65536,
+      "seed": 20261021
+    },
+    {
+      "name": "n100000-h64-spread-o65536-s20261022",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 65536,
+      "seed": 20261022
+    },
+    {
+      "name": "n100000-h64-spread-o65536-s20261023",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 65536,
+      "seed": 20261023
+    },
+    {
+      "name": "n100000-h64-spread-o32768-s20261021",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 32768,
+      "seed": 20261021
+    },
+    {
+      "name": "n100000-h64-spread-o32768-s20261022",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 32768,
+      "seed": 20261022
+    },
+    {
+      "name": "n100000-h64-spread-o32768-s20261023",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 32768,
+      "seed": 20261023
+    },
+    {
+      "name": "n100000-h64-spread-o131072-s20261021",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 131072,
+      "seed": 20261021
+    },
+    {
+      "name": "n100000-h64-spread-o131072-s20261022",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 131072,
+      "seed": 20261022
+    },
+    {
+      "name": "n100000-h64-spread-o131072-s20261023",
+      "rows": 100000,
+      "commits": 64,
+      "locality": "spread",
+      "operations": 131072,
+      "seed": 20261023
+    }
+  ],
+  "configs": [
+    [
+      "log",
+      0
+    ],
+    [
+      "merkle",
+      0
+    ],
+    [
+      "hybrid",
+      4096
+    ],
+    [
+      "hybrid",
+      16384
+    ],
+    [
+      "hybrid",
+      32768
+    ],
+    [
+      "hybrid",
+      65536
+    ],
+    [
+      "hybrid",
+      131072
+    ]
+  ],
+  "warmups": 2,
+  "warmed_blocks": 5,
+  "fresh_subset": "65,536 operations, both profiles, all seeds",
+  "fresh_blocks": 3,
+  "source_sha256": {
+    "experiments/threshold_robustness_pilot.py": "7a61645db6440239e7d57e07041b60dcaffff7e64cb8eb19ce8dad956e4d09f6",
+    "experiments/analyze_threshold_robustness_pilot.py": "ae1fcf3d32240040ea8d2aadb0943dbda74363c6f7980db63ca6a863c29d2305",
+    "experiments/threshold_validation.py": "c9cf9726df8de7247f9edaf064c118b894d1c1b460973558e033850a840de4a3",
+    "experiments/workloads.py": "8ea87cd780a7ef3c2708bc8613895e1792e2d446101d73a6b7c726cdc5fdb64c",
+    "experiments/adapters.py": "ae619430111dfe8b121fdff528b0bfb687db6d6a60ecf83ac3011ca98fdc74ff",
+    "sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835"
+  },
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "python_executable": "C:\\Python314\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 154 Stepping 4, GenuineIntel",
+  "physical_cpus": 10,
+  "logical_cpus": 12,
+  "ram": {
+    "total": 16794324992,
+    "available": 2739073024,
+    "percent": 83.7,
+    "used": 14055251968,
+    "free": 2739073024
+  },
+  "disk": {
+    "total": 428220608512,
+    "used": 341918654464,
+    "free": 86301954048,
+    "percent": 79.8
+  },
+  "psutil_version": "7.1.0",
+  "per_worker_timeout_seconds": 600,
+  "fresh_worker_timeout_seconds": 180,
+  "rss_limit_bytes": 1879048192,
+  "first_case_estimated_budget_seconds": 2400,
+  "provisional_practical_difference": 0.05,
+  "analysis": "exploratory seed-level paired medians; query IQRs; all seeds shown; no population CI; no selection/held-out claims",
+  "cache": "fresh process eagerly loads and verifies every persistent object; OS filesystem cache is not cleared; open latency separate",
+  "timing": "diff_versions plus common canonical output; decision probe and correctness outside; probe not causally subtracted",
+  "resource_reduction": "after first completed case: estimate from wall/RSS only, before viewing latency trends; if estimate exceeds 40 minutes run all 9 repeated-key cases plus 3 spread cases at 65,536; retain all failures",
+  "system_resource_floor_bytes": 201326592,
+  "geometry": "branching factor 8 and depth 4; constructor production default is 128 and is not changed; explicit experimental instances start at original study threshold 4096"
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "case": "n100000-h64-spread-o32768-s20261021",
+    "status": "not_run_resource_scope_reduction"
+  },
+  {
+    "case": "n100000-h64-spread-o32768-s20261022",
+    "status": "not_run_resource_scope_reduction"
+  },
+  {
+    "case": "n100000-h64-spread-o32768-s20261023",
+    "status": "not_run_resource_scope_reduction"
+  },
+  {
+    "case": "n100000-h64-spread-o131072-s20261021",
+    "status": "not_run_resource_scope_reduction"
+  },
+  {
+    "case": "n100000-h64-spread-o131072-s20261022",
+    "status": "not_run_resource_scope_reduction"
+  },
+  {
+    "case": "n100000-h64-spread-o131072-s20261023",
+    "status": "not_run_resource_scope_reduction"
+  }
+]
