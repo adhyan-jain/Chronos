@@ -1,0 +1,8 @@
+scenario,split,rows,commits,locality,seed,operations,changes_per_commit,strategy,threshold,selected,n,median_ms,p25_ms,p75_ms,decision_probe_median_ms,storage_bytes
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,log,0,log,7,39.3111,35.93115,51.6125,0.0254,13160448
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,merkle,0,merkle,7,47.5222,44.073750000000004,53.0724,0.0229,13160448
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,hybrid,1024,merkle,7,50.0136,48.24965,55.427,0.024,13160448
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,hybrid,2048,merkle,7,48.1118,46.2193,59.055350000000004,0.0234,13160448
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,hybrid,4096,merkle,7,46.8745,45.18435,49.41095,0.0229,13160448
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,hybrid,8192,merkle,7,46.5068,44.7298,48.1055,0.0232,13160448
+calibration-n10000-h4-spread-o32768,calibration,10000,4,spread,20261003,32768,8192,hybrid,16384,merkle,7,47.3676,44.71575,51.061350000000004,0.0218,13160448

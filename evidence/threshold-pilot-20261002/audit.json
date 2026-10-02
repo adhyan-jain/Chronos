@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "cases": 1,
+  "queries": 63,
+  "measured": 49,
+  "source_hashes_current": {
+    "experiments\\threshold_validation.py": "c9cf9726df8de7247f9edaf064c118b894d1c1b460973558e033850a840de4a3",
+    "experiments\\workloads.py": "8ea87cd780a7ef3c2708bc8613895e1792e2d446101d73a6b7c726cdc5fdb64c",
+    "experiments\\adapters.py": "ae619430111dfe8b121fdff528b0bfb687db6d6a60ecf83ac3011ca98fdc74ff",
+    "sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835"
+  }
+}
