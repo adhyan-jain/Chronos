@@ -13,6 +13,10 @@
 # testing
 /coverage
 
+# generated compiler and lint caches
+*.tsbuildinfo
+/.eslintcache
+
 # next.js
 /.next/
 /.vinext/

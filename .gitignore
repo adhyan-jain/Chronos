@@ -49,6 +49,11 @@ tmp*/
 /data/public/
 /.codex_tmp/
 
+# Historical manuscript exports; retain archive documentation and build sources
+/paper/older versions/*
+!/paper/older versions/README.md
+!/paper/older versions/sources/
+
 # Local-only preparation and review material
 /2_Revon Research Paper_comments.docx
 /Revon_Current_Stage_Presentation_Guide.pdf
