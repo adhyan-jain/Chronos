@@ -1,0 +1,33 @@
+{
+  "workload_sha256": "c147518b996772c3d989586fbf5cecd7ea668cb9acae1acfe760d048fd769aa1",
+  "historical_states": [
+    {
+      "version": 1,
+      "observed_sha256": "adad6fa44352a4f5c33e53ad3893d71f58e6c799ec73913ca3fb8e5980c8cf16",
+      "oracle_sha256": "adad6fa44352a4f5c33e53ad3893d71f58e6c799ec73913ca3fb8e5980c8cf16"
+    },
+    {
+      "version": 11,
+      "observed_sha256": "ab623f88081a6242967641762f0fb16a62ddfe72c11816c5a541f6053542ed01",
+      "oracle_sha256": "ab623f88081a6242967641762f0fb16a62ddfe72c11816c5a541f6053542ed01"
+    }
+  ],
+  "all_history_verified": false,
+  "diff_output_sha256": "1f14eb741227544fe064f13d207ca3ac4344381e12ee47ec3389189e87e6162e",
+  "diff_oracle_sha256": "1f14eb741227544fe064f13d207ca3ac4344381e12ee47ec3389189e87e6162e",
+  "diff_correct": true,
+  "changed_keys": 9956,
+  "commit_intervals_ms": [
+    864.5333,
+    813.8415,
+    861.9619,
+    813.9028,
+    1168.3945,
+    831.1915,
+    805.3846,
+    860.3601,
+    898.1283,
+    899.463
+  ],
+  "timing_note": "historical verification is outside all timed intervals"
+}

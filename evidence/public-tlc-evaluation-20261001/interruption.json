@@ -1,0 +1,13 @@
+{
+  "scenario": "tlc-n1000000-h10-c1000",
+  "model": "Revon-M (forced Merkle)",
+  "trial_kind": "measured",
+  "trial": 5,
+  "raw_status": "error",
+  "raw_notes": "NoSuchProcess: process PID not found (pid=27816)",
+  "observed_worker_wall_seconds": 4203.0470000000205,
+  "context": "The interactive turn was explicitly interrupted while this trial was active. On resumption, the parent reported a missing worker process. Two retained worker commit intervals were 1547691.8727 and 2539670.5386 ms, unlike the other intervals. These facts indicate an interrupted run; host suspension is a possible explanation, not an independently verified event.",
+  "disposition": "The failed raw trial is retained and excluded from performance summaries. Its completed worker verification is retained separately, not counted as a successful trial and not used to recover timings. No missing measurement is imputed or replaced.",
+  "retained_worker_report": "interrupted_worker_verification/tlc-n1000000-h10-c1000-measured-5-revon-m.json",
+  "inference_boundary": "This interruption is not evidence of a one-million-record algorithmic or memory limit. Other repetitions of this configuration completed."
+}

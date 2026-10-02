@@ -1,0 +1,9 @@
+{
+  "Source": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+  "VerifiedDownload": [
+    "https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet"
+  ],
+  "VerifiedUtc": "2026-10-01T17:09:01.5377931Z",
+  "Dictionary": "https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records_yellow.pdf",
+  "UsageTerms": "https://www.nyc.gov/opendata/get-started/FAQs"
+}
