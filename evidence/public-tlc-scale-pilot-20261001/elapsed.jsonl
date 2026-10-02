@@ -1,0 +1,12 @@
+{"scenario": "tlc-n100000-h10-c100", "kind": "measured", "trial": 1, "model": "revon-m", "wall_seconds": 23.98499999998603}
+{"scenario": "tlc-n100000-h10-c100", "kind": "measured", "trial": 1, "model": "snapshot", "wall_seconds": 27.453000000095926}
+{"scenario": "tlc-n100000-h10-c100", "kind": "measured", "trial": 1, "model": "revon-h", "wall_seconds": 21.640999999945052}
+{"scenario": "tlc-n100000-h10-c100", "kind": "measured", "trial": 1, "model": "dolt", "wall_seconds": 46.09299999999348}
+{"scenario": "tlc-n100000-h10-c100", "kind": "measured", "trial": 1, "model": "dolt-bulk", "wall_seconds": 57.01600000006147}
+{"scenario": "tlc-n100000-h10-c100", "kind": "measured", "trial": 1, "model": "log", "wall_seconds": 21.280999999959022}
+{"scenario": "tlc-n1000000-h10-c1000", "kind": "measured", "trial": 1, "model": "revon-m", "wall_seconds": 309.030999999959}
+{"scenario": "tlc-n1000000-h10-c1000", "kind": "measured", "trial": 1, "model": "snapshot", "wall_seconds": 189.35900000005495}
+{"scenario": "tlc-n1000000-h10-c1000", "kind": "measured", "trial": 1, "model": "dolt", "wall_seconds": 217.39099999994505}
+{"scenario": "tlc-n1000000-h10-c1000", "kind": "measured", "trial": 1, "model": "dolt-bulk", "wall_seconds": 255.57800000009593}
+{"scenario": "tlc-n1000000-h10-c1000", "kind": "measured", "trial": 1, "model": "revon-h", "wall_seconds": 225.375}
+{"scenario": "tlc-n1000000-h10-c1000", "kind": "measured", "trial": 1, "model": "log", "wall_seconds": 149.56200000003446}

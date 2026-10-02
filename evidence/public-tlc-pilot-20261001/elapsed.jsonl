@@ -1,0 +1,6 @@
+{"scenario": "tlc-n10000-h10-c10", "kind": "measured", "trial": 1, "model": "dolt", "wall_seconds": 16.594000000040978}
+{"scenario": "tlc-n10000-h10-c10", "kind": "measured", "trial": 1, "model": "revon-m", "wall_seconds": 3.9679999999934807}
+{"scenario": "tlc-n10000-h10-c10", "kind": "measured", "trial": 1, "model": "dolt-bulk", "wall_seconds": 16.32799999997951}
+{"scenario": "tlc-n10000-h10-c10", "kind": "measured", "trial": 1, "model": "revon-h", "wall_seconds": 4.141000000061467}
+{"scenario": "tlc-n10000-h10-c10", "kind": "measured", "trial": 1, "model": "snapshot", "wall_seconds": 4.108999999938533}
+{"scenario": "tlc-n10000-h10-c10", "kind": "measured", "trial": 1, "model": "log", "wall_seconds": 3.7660000000614673}
