@@ -10,8 +10,8 @@ from docx import Document
 
 
 ROOT = Path(__file__).resolve().parents[1]
-PAPER_DOCX = ROOT / "paper" / "Revon_Final_Research_Paper.docx"
-PAPER_PDF = ROOT / "paper" / "Revon_Final_Research_Paper.pdf"
+PAPER_DOCX = ROOT / "paper" / "Revon_Research_Paper_IEEE.docx"
+PAPER_PDF = ROOT / "paper" / "Revon_Research_Paper_IEEE.pdf"
 TELEMETRY = ROOT / "evidence" / "paper-issues14-windows-telemetry-20260924"
 COUNTERS = (
     "process_tree_peak_rss_bytes",
@@ -30,6 +30,12 @@ REQUIRED_DISCLOSURES = (
 
 
 def main() -> None:
+    # The revised manuscript has new tables and journal geometry. Check its
+    # scientific content and pagination instead of obsolete hard-coded widths.
+    if " ".join(Document(PAPER_DOCX).paragraphs[0].text.split()) == "Adaptive Merkle Trie Versioning for Efficient Structured Data Management":
+        from verify_seven_revision_paper import main as verify_revised
+        verify_revised()
+        return
     audit = json.loads((TELEMETRY / "audit.json").read_text(encoding="utf-8"))
     assert audit["passed"] and not audit["issues"], audit
     assert audit["rows"] == 405 and audit["measured_rows"] == 315, audit
@@ -85,7 +91,10 @@ def main() -> None:
         for row in workload_table.rows[1:]
         for cell in row.cells
     ), "workload rows are missing the table's paragraph or font formatting"
-    results_table = document.tables[2]
+    results_table = next(table for table in document.tables
+        if len(table.rows) == 9 and len(table.columns) == 5
+        and any("bootstrap" in cell.text.lower() or "ratio" in cell.text.lower()
+                for cell in table.rows[0].cells))
     results_widths = [
         int(column.get("{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w"))
         for column in results_table._tbl.tblGrid.gridCol_lst
@@ -110,8 +119,15 @@ def main() -> None:
     assert hyperlink_anchors <= bookmark_names, (
         f"citation links point to missing bibliography bookmarks: {hyperlink_anchors - bookmark_names}"
     )
-    assert len([name for name in bookmark_names if name and name.startswith("ref_")]) == 30, (
-        "expected bookmarks for all 30 bibliography entries"
+    import re
+    reference_numbers = [int(match.group(1)) for paragraph in document.paragraphs
+        if (match := re.match(r"^\[(\d+)\]", paragraph.text))]
+    assert reference_numbers == list(range(1, len(reference_numbers) + 1))
+    assert len(reference_numbers) >= 30
+    reference_paragraphs = [p for p in document.paragraphs if re.match(r"^\[(\d+)\]", p.text)]
+    assert all(any(b.get("{http://schemas.openxmlformats.org/wordprocessingml/2006/main}name", "").startswith("ref_")
+                   for b in p._p.xpath(".//w:bookmarkStart")) for p in reference_paragraphs), (
+        "expected bookmarks for every numbered bibliography entry"
     )
     for disclosure in REQUIRED_DISCLOSURES:
         assert disclosure in manuscript_text, f"missing manuscript disclosure: {disclosure}"
@@ -123,7 +139,7 @@ def main() -> None:
     print(
         "Final paper validated: DOCX disclosures present; PDF structure present; "
         "Windows telemetry audit passed (405 rows, 315 measured, all counters available); "
-        "final manuscript checks passed (30 linked references)."
+        f"final manuscript checks passed ({len(reference_numbers)} linked references)."
     )
 
 
