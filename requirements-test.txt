@@ -1,0 +1,3 @@
+# Only the process telemetry regression tests need a third-party dependency.
+# Keep this independent of document/plotting packages for Python 3.10 support.
+psutil==7.1.0
