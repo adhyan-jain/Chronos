@@ -10,7 +10,7 @@
     "dev": "vinext dev",
     "build": "vinext build",
     "start": "vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },
@@ -35,6 +35,7 @@
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
+    "fast-glob": "file:vendor/fast-glob-compat",
     "globals": "16.4.0",
     "react-server-dom-webpack": "19.2.8",
     "tailwindcss": "4.2.1",
@@ -45,11 +46,13 @@
     "wrangler": "4.130.0"
   },
   "overrides": {
+    "fast-glob": "$fast-glob",
+    "source-map-js": "1.2.2",
     "@esbuild-kit/core-utils": {
       "esbuild": "0.25.12"
     },
     "miniflare": {
-      "sharp": "0.35.4",
+      "sharp": "0.35.5",
       "undici": "7.29.1"
     }
   },

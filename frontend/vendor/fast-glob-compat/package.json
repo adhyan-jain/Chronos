@@ -1,0 +1,11 @@
+{
+  "name": "@revon/fast-glob-compat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The fast-glob calls used by Revon's build tools, backed by tinyglobby",
+  "main": "index.cjs",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "tinyglobby": "0.2.17"
+  }
+}
