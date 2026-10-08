@@ -10,10 +10,21 @@ Revon is licensed under the [Apache License 2.0](LICENSE).
 
 ## Paper and reproducibility
 
-- The final manuscript is available as
-  [PDF](paper/Revon_Final_Research_Paper.pdf) and
-  [DOCX](paper/Revon_Final_Research_Paper.docx).
-- The current audited comparison (540 executions = 120 warm-ups + 420 measured
+- The current Linux-validated manuscript is available in Discover Computing
+  ([PDF](paper/Revon_Research_Paper_Discover_Computing.pdf),
+  [DOCX](paper/Revon_Research_Paper_Discover_Computing.docx)) and IEEE
+  ([PDF](paper/Revon_Research_Paper_IEEE.pdf),
+  [DOCX](paper/Revon_Research_Paper_IEEE.docx)) formats.
+- The current Linux evidence contains 516 executions, with a separate
+  72-execution geometry/telemetry supplement. The exact protocols, executed
+  source, semantic checks, limitations and raw results are retained in
+  [`evidence/linux-validation-20261008/`](evidence/linux-validation-20261008/)
+  and [`evidence/linux-final-supplement-20261008/`](evidence/linux-final-supplement-20261008/).
+  [Online Resource 1](paper/Revon_Linux_Reproducibility_Supplement.zip) includes
+  the manuscript model and figure assets. Integrity checks do not constitute
+  independent timing reproduction; timings from different campaigns must not
+  be pooled.
+- The historical Windows comparison (540 executions = 120 warm-ups + 420 measured
   runs) is stored in
   [`evidence/paper-corrected-issues13-17-counterbalanced-final-20260923/`](evidence/paper-corrected-issues13-17-counterbalanced-final-20260923/).
   It separates Dolt's batched SQL and CSV bulk-import workflows, balances model
@@ -31,27 +42,33 @@ Git. Personal presentation and review material is not part of the repository.
 
 ## Maintain publication artifacts
 
-Install the pinned document-generation dependencies:
+To run the same publication checks as CI, install the small pinned verification
+dependency set. These commands read committed artifacts without regenerating
+the manuscripts or modifying collected evidence:
 
 ```powershell
-python -m pip install -r requirements.txt
+python -m pip install -r requirements-publication.txt
+python -m unittest discover -s tools/tests -v
+python tools/check_final_paper.py
 ```
 
-After auditing the corrected evidence, update the existing submission DOCX
-without discarding its later layout edits. The older full builder targets the
-superseded August bundle and must not be used to regenerate the current paper.
+The publication gate checks both formats against the packaged model, all
+tables and figures, citations, PDF structure/bounds, collection/package/source
+hashes, frozen execution order, historical correctness proofs, raw summaries,
+paired intervals and the adverse frozen-threshold finding. It needs neither
+ignored `output/` files nor private cloud download archives. Visual review and
+corresponding-author approval remain separate from this automated gate.
+
 The architecture PDFs can be rebuilt separately:
 
 ```powershell
-python -m experiments.evidence_audit evidence/paper-corrected-issues13-17-counterbalanced-final-20260923
-python tools/revise_paper_issues13_to17.py
 python tools/build_architecture_pdfs.py
 ```
 
-Export `paper/Revon_Final_Research_Paper.docx` to PDF with Microsoft Word or
-LibreOffice. The application core uses only the Python standard library. The
-benchmark and publication workflows use the pinned dependencies in
-`requirements.txt`.
+The older manuscript builders target superseded evidence and must not be used
+to overwrite the current papers. The application core uses only the Python
+standard library. Full benchmark, dataset and figure-generation dependencies
+remain pinned in `requirements.txt`; they are not needed for the CI checks.
 
 ## Run the demo
 
@@ -96,7 +113,11 @@ content-addressed commits, and Revon-H diff selection remain Revon logic.
 
 ## Run the tests
 
+The core needs no third-party packages; telemetry regression tests require
+`psutil`. CI runs this suite on Python 3.10 and 3.14:
+
 ```powershell
+python -m pip install -r requirements-test.txt
 python -m unittest discover -s tests -v
 ```
 
