@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "threshold_cases": 42,
+  "startup_groups": 6,
+  "rss_groups": 18,
+  "pilot_groups": 18,
+  "repair_executions": 36,
+  "old_tracked_evidence_unchanged": true,
+  "repair_source_matches_measured_snapshot": true,
+  "limits": "Numeric and provenance checks; visual inspection and journal disclosure remain separate."
+}

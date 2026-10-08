@@ -1,0 +1,170 @@
+[
+  {
+    "profile": "10k-spread-h10",
+    "metric": "initial_import_ms",
+    "n": 5,
+    "before_ms": 312.6282,
+    "after_ms": 321.5474,
+    "median_paired_after_over_before": 1.0895130381712208
+  },
+  {
+    "profile": "10k-spread-h10",
+    "metric": "commit_ms",
+    "n": 5,
+    "before_ms": 27.3511,
+    "after_ms": 26.00825,
+    "median_paired_after_over_before": 0.9842310846169289
+  },
+  {
+    "profile": "10k-spread-h10",
+    "metric": "log_ms",
+    "n": 5,
+    "before_ms": 0.4009,
+    "after_ms": 0.4393,
+    "median_paired_after_over_before": 0.9772135416666669
+  },
+  {
+    "profile": "10k-spread-h10",
+    "metric": "merkle_ms",
+    "n": 5,
+    "before_ms": 1.4806,
+    "after_ms": 1.8274,
+    "median_paired_after_over_before": 1.18391192759692
+  },
+  {
+    "profile": "10k-spread-h10",
+    "metric": "hybrid_ms",
+    "n": 5,
+    "before_ms": 0.2277,
+    "after_ms": 0.2906,
+    "median_paired_after_over_before": 1.0917874396135265
+  },
+  {
+    "profile": "10k-spread-h10",
+    "metric": "checkout_ms",
+    "n": 5,
+    "before_ms": 11.0687,
+    "after_ms": 15.0342,
+    "median_paired_after_over_before": 1.2930797318927572
+  },
+  {
+    "profile": "10k-spread-h10",
+    "metric": "open_verify_ms",
+    "n": 5,
+    "before_ms": 234.6209,
+    "after_ms": 216.6078,
+    "median_paired_after_over_before": 0.9308613251360895
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "initial_import_ms",
+    "n": 5,
+    "before_ms": 315.6902,
+    "after_ms": 348.6401,
+    "median_paired_after_over_before": 1.0454328325681317
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "commit_ms",
+    "n": 5,
+    "before_ms": 103.63165000000001,
+    "after_ms": 102.9224,
+    "median_paired_after_over_before": 0.9424209168598795
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "log_ms",
+    "n": 5,
+    "before_ms": 1.1668,
+    "after_ms": 1.0629,
+    "median_paired_after_over_before": 0.8894902657726795
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "merkle_ms",
+    "n": 5,
+    "before_ms": 1.7392,
+    "after_ms": 1.6507,
+    "median_paired_after_over_before": 0.7543123275068997
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "hybrid_ms",
+    "n": 5,
+    "before_ms": 1.2564,
+    "after_ms": 1.4236,
+    "median_paired_after_over_before": 1.1115769343924684
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "checkout_ms",
+    "n": 5,
+    "before_ms": 12.414,
+    "after_ms": 15.8724,
+    "median_paired_after_over_before": 1.2718473052452766
+  },
+  {
+    "profile": "10k-repeated-h50",
+    "metric": "open_verify_ms",
+    "n": 5,
+    "before_ms": 779.5946,
+    "after_ms": 796.0826,
+    "median_paired_after_over_before": 0.9858483404549673
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "initial_import_ms",
+    "n": 5,
+    "before_ms": 1868.6072,
+    "after_ms": 1862.9361,
+    "median_paired_after_over_before": 0.9969650657452246
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "commit_ms",
+    "n": 5,
+    "before_ms": 161.34705000000002,
+    "after_ms": 158.43849999999998,
+    "median_paired_after_over_before": 0.981059589797668
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "log_ms",
+    "n": 5,
+    "before_ms": 2.767,
+    "after_ms": 3.8164,
+    "median_paired_after_over_before": 1.3792555113841705
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "merkle_ms",
+    "n": 5,
+    "before_ms": 25.3861,
+    "after_ms": 30.7188,
+    "median_paired_after_over_before": 1.2251822847936469
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "hybrid_ms",
+    "n": 5,
+    "before_ms": 3.2549,
+    "after_ms": 3.3839,
+    "median_paired_after_over_before": 1.0877909219493378
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "checkout_ms",
+    "n": 5,
+    "before_ms": 205.4268,
+    "after_ms": 221.9108,
+    "median_paired_after_over_before": 1.0578584660424262
+  },
+  {
+    "profile": "100k-spread-h10",
+    "metric": "open_verify_ms",
+    "n": 5,
+    "before_ms": 1724.0941,
+    "after_ms": 2127.8493,
+    "median_paired_after_over_before": 1.2241434007390652
+  }
+]

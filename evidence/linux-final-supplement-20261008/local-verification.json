@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "file_hashes": 138,
+  "telemetry_executions": 27,
+  "geometry_executions": 45,
+  "geometry_summary_byte_identical": true,
+  "core_source_identical": true,
+  "zero_read_observations": 27,
+  "adverse_threshold_matched_trials": 7,
+  "external_archive_sha256": "440761dae203cef2860327e9f688bfcb0b29f2f635b9568144c232f7c84027bd",
+  "scope": "local semantic/matrix/provenance/summary audit; no independent timing reproduction"
+}

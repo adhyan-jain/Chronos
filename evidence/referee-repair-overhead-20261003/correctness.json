@@ -1,0 +1,96 @@
+{
+  "passed": true,
+  "legacy_reopen_compatible": true,
+  "checks": [
+    {
+      "profile": "10k-spread-h10",
+      "block": 0,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-spread-h10",
+      "block": 1,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-spread-h10",
+      "block": 2,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-spread-h10",
+      "block": 3,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-spread-h10",
+      "block": 4,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-spread-h10",
+      "block": 5,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-repeated-h50",
+      "block": 0,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-repeated-h50",
+      "block": 1,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-repeated-h50",
+      "block": 2,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-repeated-h50",
+      "block": 3,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-repeated-h50",
+      "block": 4,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "10k-repeated-h50",
+      "block": 5,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "100k-spread-h10",
+      "block": 0,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "100k-spread-h10",
+      "block": 1,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "100k-spread-h10",
+      "block": 2,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "100k-spread-h10",
+      "block": 3,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "100k-spread-h10",
+      "block": 4,
+      "string_roots_compatible": true
+    },
+    {
+      "profile": "100k-spread-h10",
+      "block": 5,
+      "string_roots_compatible": true
+    }
+  ]
+}

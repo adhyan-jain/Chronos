@@ -1,0 +1,110 @@
+[1/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=16.314736ms, RSS=46809088; 
+[2/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=126.652711ms, RSS=144134144; 
+[3/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=11.647422ms, RSS=46702592; 
+[4/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=128.82131ms, RSS=143368192; 
+[5/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=11.768904ms, RSS=46800896; 
+[6/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=16.449553ms, RSS=46776320; 
+[7/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=15.434899ms, RSS=46841856; 
+[8/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=11.530292ms, RSS=46804992; 
+[9/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=123.385078ms, RSS=144158720; 
+[10/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=11.793872ms, RSS=46710784; 
+[11/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=123.495379ms, RSS=144584704; 
+[12/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=17.392498ms, RSS=46723072; 
+[13/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=112.00657ms, RSS=142872576; 
+[14/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=17.10217ms, RSS=46747648; 
+[15/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=10.333262ms, RSS=46743552; 
+[16/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=18.1455ms, RSS=46792704; 
+[17/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=9.603549ms, RSS=46735360; 
+[18/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=117.447966ms, RSS=144986112; 
+[19/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=10.576456ms, RSS=46731264; 
+[20/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=122.90293ms, RSS=143572992; 
+[21/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=14.687224ms, RSS=46735360; 
+[22/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=119.553268ms, RSS=142446592; 
+[23/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=15.56051ms, RSS=46743552; 
+[24/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=9.945902ms, RSS=46850048; 
+[25/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=16.976055ms, RSS=46743552; 
+[26/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=12.061343ms, RSS=46809088; 
+[27/27] {'phase': 'evaluation', 'scenario': 'linux-telemetry-n10000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=120.418273ms, RSS=143822848; 
+{
+  "passed": true,
+  "issues": [],
+  "raw_rows": 27,
+  "expected_rows": 27,
+  "correct_rows": 27,
+  "warmup_rows": 6,
+  "measured_rows": 21,
+  "diagnostic_rows": 0,
+  "audit_scope": "source/protocol/matrix/semantic output hashes/history/summary integrity; not independent timing reproduction"
+}
+geometry 1/45 b4-d6: ok
+geometry 2/45 b8-d3: ok
+geometry 3/45 b8-d4: ok
+geometry 4/45 b8-d5: ok
+geometry 5/45 b16-d3: ok
+geometry 6/45 b8-d3: ok
+geometry 7/45 b8-d4: ok
+geometry 8/45 b8-d5: ok
+geometry 9/45 b16-d3: ok
+geometry 10/45 b4-d6: ok
+geometry 11/45 b4-d6: ok
+geometry 12/45 b8-d3: ok
+geometry 13/45 b8-d4: ok
+geometry 14/45 b8-d5: ok
+geometry 15/45 b16-d3: ok
+geometry 16/45 b8-d3: ok
+geometry 17/45 b8-d4: ok
+geometry 18/45 b8-d5: ok
+geometry 19/45 b16-d3: ok
+geometry 20/45 b4-d6: ok
+geometry 21/45 b8-d4: ok
+geometry 22/45 b8-d5: ok
+geometry 23/45 b16-d3: ok
+geometry 24/45 b4-d6: ok
+geometry 25/45 b8-d3: ok
+geometry 26/45 b8-d5: ok
+geometry 27/45 b16-d3: ok
+geometry 28/45 b4-d6: ok
+geometry 29/45 b8-d3: ok
+geometry 30/45 b8-d4: ok
+geometry 31/45 b16-d3: ok
+geometry 32/45 b4-d6: ok
+geometry 33/45 b8-d3: ok
+geometry 34/45 b8-d4: ok
+geometry 35/45 b8-d5: ok
+geometry 36/45 b4-d6: ok
+geometry 37/45 b8-d3: ok
+geometry 38/45 b8-d4: ok
+geometry 39/45 b8-d5: ok
+geometry 40/45 b16-d3: ok
+geometry 41/45 b8-d3: ok
+geometry 42/45 b8-d4: ok
+geometry 43/45 b8-d5: ok
+geometry 44/45 b16-d3: ok
+geometry 45/45 b4-d6: ok

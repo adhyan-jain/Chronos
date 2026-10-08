@@ -1,0 +1,12 @@
+{
+  "recorded_after_campaign_utc": "2026-10-08T15:01:21.154622+00:00",
+  "version": "3.14.3 (main, Mar 24 2026, 22:50:36) [Clang 22.1.1 ]",
+  "binary_sha256": "3c5fd2caadada58c68c7ad95ca9003b32602aa81e5ea606caeb3e5da55bf7169",
+  "gil_enabled": true,
+  "build": {
+    "CONFIG_ARGS": "'--build=x86_64-unknown-linux-gnu' '--host=x86_64-unknown-linux-gnu' '--prefix=/install' '--with-openssl=/tools/deps' '--with-system-expat' '--with-system-libmpdec' '--without-ensurepip' '--with-readline=editline' '--with-tail-call-interp' '--enable-static-libpython-for-interpreter' '--enable-shared' '--with-mimalloc' '--enable-optimizations' '--enable-bolt' '--enable-experimental-jit=yes-off' '--with-lto' '--with-build-python=/tools/host/bin/python3.14' 'ac_cv_func_explicit_bzero=no' '--with-dbmliborder=bdb' 'build_alias=x86_64-unknown-linux-gnu' 'host_alias=x86_64-unknown-linux-gnu' 'PKG_CONFIG=pkg-config --static' 'PKG_CONFIG_PATH=/tools/deps/share/pkgconfig:/tools/deps/lib/pkgconfig' 'CC=clang' 'CFLAGS=-O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC ' 'LDFLAGS= -Wl,--exclude-libs,ALL ' 'CPPFLAGS=-O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC ' 'PROFILE_TASK=-m test --pgo -j 4 --ignore test_json --ignore test.test_bytes.BytesTest.test_from_format'",
+    "CC": "cc -pthread",
+    "CFLAGS": "-fno-strict-overflow -Wsign-compare -Wunreachable-code -DNDEBUG -g -O3 -Wall -O3 -fno-omit-frame-pointer -mno-omit-leaf-frame-pointer -fPIC",
+    "Py_GIL_DISABLED": 0
+  }
+}

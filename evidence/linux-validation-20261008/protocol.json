@@ -1,0 +1,5493 @@
+{
+  "campaign_wall_limit_seconds": 10800,
+  "cases": [
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 10,
+        "commits": 10,
+        "locality": "spread",
+        "name": "small-sparse",
+        "payload_bytes": 32,
+        "rows": 1000,
+        "seed": 20270822
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 10,
+        "commits": 10,
+        "locality": "spread",
+        "name": "medium-sparse",
+        "payload_bytes": 32,
+        "rows": 10000,
+        "seed": 20270823
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 1000,
+        "commits": 10,
+        "locality": "spread",
+        "name": "medium-dense",
+        "payload_bytes": 32,
+        "rows": 10000,
+        "seed": 20270824
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "spread",
+        "name": "large-sparse",
+        "payload_bytes": 32,
+        "rows": 100000,
+        "seed": 20270825
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "application-key-local",
+        "name": "large-application-key-local",
+        "payload_bytes": 32,
+        "rows": 100000,
+        "seed": 20270826
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "range-local",
+        "name": "large-range-local",
+        "payload_bytes": 32,
+        "rows": 100000,
+        "seed": 20270827
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "repeated-key",
+        "name": "large-repeated-key",
+        "payload_bytes": 32,
+        "rows": 100000,
+        "seed": 20270828
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "original workflow T=4096",
+      "measured_kind": "measured",
+      "models": [
+        "snapshot",
+        "log",
+        "revon-m",
+        "revon-h",
+        "dolt",
+        "dolt-bulk"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "hash-route-local",
+        "name": "large-hash-route-local",
+        "payload_bytes": 32,
+        "rows": 100000,
+        "seed": 20270829
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "held-out supplement T=16384; not an optimality claim",
+      "measured_kind": "measured",
+      "models": [
+        "revon-log",
+        "revon-m",
+        "revon-h"
+      ],
+      "phase": "threshold-supplement",
+      "spec": {
+        "changes_per_commit": 512,
+        "commits": 16,
+        "locality": "repeated-key",
+        "name": "linux-threshold-h16-c512",
+        "payload_bytes": 32,
+        "rows": 10000,
+        "seed": 20261024
+      },
+      "threshold": 16384,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "synthetic",
+      "historical_reference": "held-out supplement T=16384; not an optimality claim",
+      "measured_kind": "measured",
+      "models": [
+        "revon-log",
+        "revon-m",
+        "revon-h"
+      ],
+      "phase": "threshold-supplement",
+      "spec": {
+        "changes_per_commit": 512,
+        "commits": 64,
+        "locality": "repeated-key",
+        "name": "linux-threshold-h64-c512",
+        "payload_bytes": 32,
+        "rows": 10000,
+        "seed": 20261072
+      },
+      "threshold": 16384,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "tlc",
+      "historical_reference": "checksum-pinned TLC; generated fare corrections",
+      "measured_kind": "measured",
+      "models": [
+        "revon-m",
+        "revon-h",
+        "dolt"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "spread",
+        "name": "linux-tlc-n100000-h10-c100",
+        "payload_bytes": 8,
+        "rows": 100000,
+        "seed": 20261001
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    },
+    {
+      "dataset": "tlc",
+      "historical_reference": "checksum-pinned TLC; generated fare corrections",
+      "measured_kind": "diagnostic",
+      "models": [
+        "revon-m",
+        "revon-h",
+        "dolt"
+      ],
+      "phase": "scale-feasibility",
+      "spec": {
+        "changes_per_commit": 1000,
+        "commits": 10,
+        "locality": "spread",
+        "name": "linux-tlc-n1000000-h10-c1000",
+        "payload_bytes": 8,
+        "rows": 1000000,
+        "seed": 20261001
+      },
+      "threshold": 4096,
+      "trials": 1,
+      "warmups": 0
+    }
+  ],
+  "created_utc": "2026-10-08T13:42:59.592428+00:00",
+  "execution_plan": [
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "small-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "medium-dense",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-sparse",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-application-key-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-range-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-repeated-key",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Log-only",
+      "model_key": "log",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Snapshot",
+      "model_key": "snapshot",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 4,
+      "model": "Dolt (bulk import)",
+      "model_key": "dolt-bulk",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 5,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 6,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "large-hash-route-local",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h16-c512",
+      "threshold": 16384,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-log calibration",
+      "model_key": "revon-log",
+      "phase": "threshold-supplement",
+      "scenario": "linux-threshold-h64-c512",
+      "threshold": 16384,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-tlc-n100000-h10-c100",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "scale-feasibility",
+      "scenario": "linux-tlc-n1000000-h10-c1000",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "diagnostic"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "scale-feasibility",
+      "scenario": "linux-tlc-n1000000-h10-c1000",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "diagnostic"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "scale-feasibility",
+      "scenario": "linux-tlc-n1000000-h10-c1000",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "diagnostic"
+    }
+  ],
+  "include_public": true,
+  "limitations": [
+    "additional machine, not independent research team",
+    "hardware/OS/virtualization/storage differ; no Linux-only causal effect",
+    "repaired-source evidence separate from historical pre-repair Windows timings",
+    "one million rows: one diagnostic trial per system, no performance ranking",
+    "cached single-host repetitions do not establish population generality",
+    "Revon API versus Dolt CLI workflow, not engine-only comparison"
+  ],
+  "no_calibration": true,
+  "trial_timeout_seconds": 900,
+  "workload_hashes": {
+    "large-application-key-local": "839f51b1d7efe0f904a2bc6bc4bbdeec6eba152505bd94a5052e6934c6b3fd73",
+    "large-hash-route-local": "580d0c69ba12e3a80a2209c93a1bc944ef80efab034e11e3d81f120de38da2b8",
+    "large-range-local": "bc0bfb351cb86e491aa4f5f4f5c95317344fcc203ef9733fe0ed6ac6ac6c04e4",
+    "large-repeated-key": "931a79fbb854f198f331ef1e8c9c504d1228db04001ba6733ad71210bf2831fe",
+    "large-sparse": "a74710e5f8cf1f176718c5b779baddb57dfd2a56d514d69f91c85cf401b0c83d",
+    "linux-threshold-h16-c512": "fb1e8e1b8f6de9d54fc4be485622923050069a7e877593e754ed3765cd15333b",
+    "linux-threshold-h64-c512": "23c04ab9e695074ea8a326d25aeb6087025e2bb3913bd8af38ac3ea6114e1fd8",
+    "linux-tlc-n100000-h10-c100": "4d0a98101439e54eefa6d285788e8d8b35210ea6f3716966cd1d4a067cf911df",
+    "linux-tlc-n1000000-h10-c1000": "173ab240416847f3e4309236d7bd12611dbc953bc97249719e53cdb072a3339c",
+    "medium-dense": "53c484416da0adeed737d289063de17c35f8f0b1d6554eff2b120d8091ddb8f4",
+    "medium-sparse": "5b37053c578c35f2e5d54ca72adc0c72b6fb2afcf6b80ee78c1e7be454403192",
+    "small-sparse": "0c7d0c62a33fc0504bb64032e27fd0a6ee3287574615274ec862000f47f28255"
+  }
+}

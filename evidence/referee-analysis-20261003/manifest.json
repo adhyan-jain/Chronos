@@ -1,0 +1,13 @@
+{
+  "analysis_only": true,
+  "source_commit": "37d27d465ffc922a3881b85bb415574f956a9a09",
+  "inputs": {
+    "evidence\\threshold-heldout-20261002\\summary.csv": "495bacf7733679dfc06e21e8231fe47e7868095a562857cd98407734a1444e36",
+    "evidence\\threshold-robustness-pilot-20261002\\raw_results.csv": "7dd2e0a16c3e9bc9837ef0aa2ff19e2aeb73188547894aa6bd9fc0d7ec429360",
+    "evidence\\trie-sensitivity-issues8-20260923\\summary.csv": "a29b9428e9cf8dea5a5568131c669f2267c7c4275c3d2a68fd316a0be6486075",
+    "evidence\\public-tlc-combined-20261002\\raw_results.csv": "1f6ee49833e534e35b8972b3db2be4bbbf6efad4eff046c1082a59bacc0e967a"
+  },
+  "method": "Medians and linear interpolated quartiles. Threshold scores equal-weight case median/oracle. Startup totals paired per recorded row. Pilot ratios paired by case/cache/block.",
+  "generated_by": "python tools/referee_revision.py",
+  "script_sha256": "534604e7980675ed4bbb8c25d3886ac711e250c9eb3f7875b562d8a9163a1e9e"
+}

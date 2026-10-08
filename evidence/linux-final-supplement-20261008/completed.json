@@ -1,0 +1,12 @@
+{
+  "audit_scope": "source/protocol/matrix/semantic output hashes/history/summary integrity; not independent timing reproduction",
+  "correct_rows": 27,
+  "diagnostic_rows": 0,
+  "expected_rows": 27,
+  "finished_utc": "2026-10-08T15:14:40.742343+00:00",
+  "issues": [],
+  "measured_rows": 21,
+  "passed": true,
+  "raw_rows": 27,
+  "warmup_rows": 6
+}

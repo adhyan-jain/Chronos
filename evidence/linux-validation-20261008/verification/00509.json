@@ -1,0 +1,78 @@
+{
+  "workload_sha256": "4d0a98101439e54eefa6d285788e8d8b35210ea6f3716966cd1d4a067cf911df",
+  "historical_states": [
+    {
+      "version": 1,
+      "observed_sha256": "6c73dd0e2746227dbc7a9a0539d9221d9d4ea8140e977b2f57d2e14b78c2b936",
+      "oracle_sha256": "6c73dd0e2746227dbc7a9a0539d9221d9d4ea8140e977b2f57d2e14b78c2b936"
+    },
+    {
+      "version": 2,
+      "observed_sha256": "41ec7c0a7db0d9f97cc0b09abb7e4ab3eb85114b73ef5cd0d38326e6b97e3dd6",
+      "oracle_sha256": "41ec7c0a7db0d9f97cc0b09abb7e4ab3eb85114b73ef5cd0d38326e6b97e3dd6"
+    },
+    {
+      "version": 3,
+      "observed_sha256": "ad0b3472dfc95b24c0cf68a140443c00e0447f3d2b4d0a3528bd063a84d4e737",
+      "oracle_sha256": "ad0b3472dfc95b24c0cf68a140443c00e0447f3d2b4d0a3528bd063a84d4e737"
+    },
+    {
+      "version": 4,
+      "observed_sha256": "cab27af430a357c23c7179f8f8e58d3c60dc5502236ae07e29ea0b3cc2a262f1",
+      "oracle_sha256": "cab27af430a357c23c7179f8f8e58d3c60dc5502236ae07e29ea0b3cc2a262f1"
+    },
+    {
+      "version": 5,
+      "observed_sha256": "3bb222c3e5bf23af62c74468b384ca262a71de1f83841cd70b88dd420072529a",
+      "oracle_sha256": "3bb222c3e5bf23af62c74468b384ca262a71de1f83841cd70b88dd420072529a"
+    },
+    {
+      "version": 6,
+      "observed_sha256": "32477fd9112d21971a1071988d18b54a1d96a4883bfbce9efdd33ae6b834c3b6",
+      "oracle_sha256": "32477fd9112d21971a1071988d18b54a1d96a4883bfbce9efdd33ae6b834c3b6"
+    },
+    {
+      "version": 7,
+      "observed_sha256": "3f7ffcfaf1d43b3a4393aef9ca50d58f6d1a435ec2cc90ac2430e21ea5dcc9c5",
+      "oracle_sha256": "3f7ffcfaf1d43b3a4393aef9ca50d58f6d1a435ec2cc90ac2430e21ea5dcc9c5"
+    },
+    {
+      "version": 8,
+      "observed_sha256": "5fb5ae5feacfa453e0b084dd816735e83d43d7afe4d1669a0ea77bf4160ca90a",
+      "oracle_sha256": "5fb5ae5feacfa453e0b084dd816735e83d43d7afe4d1669a0ea77bf4160ca90a"
+    },
+    {
+      "version": 9,
+      "observed_sha256": "b751660d5110b8de4907d773215ab5acb7999013016c3df90d11d0ed0ef7a192",
+      "oracle_sha256": "b751660d5110b8de4907d773215ab5acb7999013016c3df90d11d0ed0ef7a192"
+    },
+    {
+      "version": 10,
+      "observed_sha256": "1057f41ff83b67bdbdef4139cae06348d1830fcd3ca08e0a31cb7fd65a5a6c36",
+      "oracle_sha256": "1057f41ff83b67bdbdef4139cae06348d1830fcd3ca08e0a31cb7fd65a5a6c36"
+    },
+    {
+      "version": 11,
+      "observed_sha256": "47a6ca0843fc843612d3b775713ec6282439ef98b6b7c19b4c476d39cf7de983",
+      "oracle_sha256": "47a6ca0843fc843612d3b775713ec6282439ef98b6b7c19b4c476d39cf7de983"
+    }
+  ],
+  "all_history_verified": true,
+  "diff_output_sha256": "8b313583901d105496839ff59be272dae29404f6ac9a6ed753df4158085e2957",
+  "diff_oracle_sha256": "8b313583901d105496839ff59be272dae29404f6ac9a6ed753df4158085e2957",
+  "diff_correct": true,
+  "changed_keys": 998,
+  "commit_intervals_ms": [
+    94.743442,
+    169.421814,
+    95.062731,
+    94.72719,
+    216.027549,
+    310.720456,
+    96.706371,
+    342.00628,
+    575.751089,
+    784.272908
+  ],
+  "timing_note": "historical verification is outside all timed intervals"
+}

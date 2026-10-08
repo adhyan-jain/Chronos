@@ -1,0 +1,7 @@
+{
+  "executions": 45,
+  "historical_states_per_execution": 11,
+  "issues": [],
+  "passed": true,
+  "scope": "geometry output identities, full-history worker oracle and raw-row integrity"
+}

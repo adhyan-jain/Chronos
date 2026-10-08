@@ -7,6 +7,27 @@ not a separate product claim.
 
 ## Run it
 
+### Separate Linux cloud validation
+
+The frozen Linux campaign is documented in
+[`docs/experiments/LINUX_VALIDATION.md`](../docs/experiments/LINUX_VALIDATION.md).
+It evaluates the repaired JSON implementation on an additional GCP VM, using
+fixed thresholds and separately retained evidence. Its public million-row
+cases are single-run feasibility diagnostics, not repeated performance claims.
+
+```bash
+export PYTHONHASHSEED=20261008
+python -m experiments.linux_validation --output evidence/linux-new-run --dataset DATASET_PREPARED_DIRECTORY
+python -m experiments.linux_validation --output evidence/linux-new-run --dataset DATASET_PREPARED_DIRECTORY --audit
+```
+
+Use the pinned environment and archived source described in that document.
+Do not substitute the paper-profile command below: that command recalibrates
+the threshold. Audit a retained bundle from its archived `source/` directory
+so later working-tree edits cannot be substituted for the executed snapshot.
+
+### Original benchmark runner
+
 Quick correctness and pipeline check:
 
 ```powershell

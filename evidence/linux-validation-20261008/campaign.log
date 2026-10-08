@@ -1,0 +1,1043 @@
+[1/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=4.428969ms, RSS=25051136; 
+[2/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=84.966735ms, RSS=123879424; 
+[3/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=0.766521ms, RSS=25059328; 
+[4/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=96.491009ms, RSS=122155008; 
+[5/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.18289ms, RSS=28717056; 
+[6/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=0.580397ms, RSS=28766208; 
+[7/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=90.665927ms, RSS=121626624; 
+[8/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=0.76281ms, RSS=25034752; 
+[9/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=88.938573ms, RSS=122220544; 
+[10/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.240775ms, RSS=28692480; 
+[11/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=0.56699ms, RSS=28745728; 
+[12/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=3.804263ms, RSS=25206784; 
+[13/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=0.582506ms, RSS=28803072; 
+[14/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=3.743328ms, RSS=25067520; 
+[15/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1.150199ms, RSS=28700672; 
+[16/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=0.765237ms, RSS=25202688; 
+[17/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=107.363022ms, RSS=123355136; 
+[18/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=90.70432ms, RSS=121724928; 
+[19/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=4.144317ms, RSS=25116672; 
+[20/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=1.199613ms, RSS=28758016; 
+[21/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=0.787436ms, RSS=25128960; 
+[22/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=91.053162ms, RSS=121782272; 
+[23/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=91.076875ms, RSS=123408384; 
+[24/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=0.558993ms, RSS=28708864; 
+[25/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.264595ms, RSS=28712960; 
+[26/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=0.769032ms, RSS=25161728; 
+[27/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=88.544983ms, RSS=121810944; 
+[28/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=92.309757ms, RSS=122908672; 
+[29/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=0.623069ms, RSS=28725248; 
+[30/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=3.762884ms, RSS=25145344; 
+[31/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=0.796057ms, RSS=25075712; 
+[32/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=83.268554ms, RSS=121577472; 
+[33/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=84.482541ms, RSS=123260928; 
+[34/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=0.604421ms, RSS=28770304; 
+[35/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=3.790439ms, RSS=25063424; 
+[36/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.181397ms, RSS=28680192; 
+[37/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=94.705202ms, RSS=122679296; 
+[38/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=89.831034ms, RSS=122589184; 
+[39/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=0.560906ms, RSS=28631040; 
+[40/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=3.680084ms, RSS=25145344; 
+[41/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.962816ms, RSS=28725248; 
+[42/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=0.758383ms, RSS=25059328; 
+[43/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=91.173639ms, RSS=121630720; 
+[44/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=0.617532ms, RSS=28688384; 
+[45/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=3.728193ms, RSS=25133056; 
+[46/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.936754ms, RSS=28692480; 
+[47/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=0.753033ms, RSS=25030656; 
+[48/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=95.600419ms, RSS=122994688; 
+[49/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=0.61293ms, RSS=28741632; 
+[50/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=3.890765ms, RSS=25071616; 
+[51/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1.258578ms, RSS=28741632; 
+[52/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=0.707078ms, RSS=25006080; 
+[53/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=87.23186ms, RSS=122564608; 
+[54/516] {'phase': 'evaluation', 'scenario': 'small-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=82.287205ms, RSS=122568704; 
+[55/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=45.536601ms, RSS=34598912; 
+[56/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=0.625067ms, RSS=44945408; 
+[57/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=90.518426ms, RSS=144461824; 
+[58/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=94.953608ms, RSS=138641408; 
+[59/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=0.834154ms, RSS=35733504; 
+[60/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.618903ms, RSS=44830720; 
+[61/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=0.612281ms, RSS=44863488; 
+[62/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=97.337673ms, RSS=145608704; 
+[63/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=89.952613ms, RSS=143368192; 
+[64/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.025424ms, RSS=34566144; 
+[65/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.650536ms, RSS=44789760; 
+[66/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=42.492702ms, RSS=36155392; 
+[67/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.564205ms, RSS=44851200; 
+[68/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=95.515472ms, RSS=143728640; 
+[69/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=0.781989ms, RSS=34521088; 
+[70/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=42.034204ms, RSS=34471936; 
+[71/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=90.380476ms, RSS=141787136; 
+[72/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=0.641201ms, RSS=44748800; 
+[73/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=91.354868ms, RSS=142913536; 
+[74/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=0.809507ms, RSS=34496512; 
+[75/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=45.773876ms, RSS=34697216; 
+[76/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=90.992795ms, RSS=141594624; 
+[77/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=0.61435ms, RSS=44986368; 
+[78/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.577104ms, RSS=44859392; 
+[79/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=0.746866ms, RSS=34471936; 
+[80/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=41.139285ms, RSS=36130816; 
+[81/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=96.63208ms, RSS=139108352; 
+[82/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=0.992648ms, RSS=44793856; 
+[83/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.876331ms, RSS=45035520; 
+[84/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=98.468009ms, RSS=144490496; 
+[85/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=46.247867ms, RSS=36159488; 
+[86/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=95.230432ms, RSS=141021184; 
+[87/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=0.666561ms, RSS=44802048; 
+[88/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.644306ms, RSS=44777472; 
+[89/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=98.758196ms, RSS=142082048; 
+[90/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=0.778082ms, RSS=34603008; 
+[91/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=87.31608ms, RSS=142340096; 
+[92/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=0.62726ms, RSS=44793856; 
+[93/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1.573595ms, RSS=44818432; 
+[94/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=96.694133ms, RSS=142491648; 
+[95/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=0.741805ms, RSS=34590720; 
+[96/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=44.991526ms, RSS=35221504; 
+[97/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=0.620702ms, RSS=44765184; 
+[98/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=1.75871ms, RSS=44781568; 
+[99/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=86.94924ms, RSS=143814656; 
+[100/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=0.755949ms, RSS=34492416; 
+[101/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=39.960728ms, RSS=34885632; 
+[102/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=93.864692ms, RSS=141684736; 
+[103/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.620037ms, RSS=44752896; 
+[104/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=94.920383ms, RSS=144175104; 
+[105/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=0.822039ms, RSS=34521088; 
+[106/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=43.672461ms, RSS=36114432; 
+[107/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=104.322741ms, RSS=139862016; 
+[108/516] {'phase': 'evaluation', 'scenario': 'medium-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=0.629432ms, RSS=44802048; 
+[109/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=299.689052ms, RSS=148058112; 
+[110/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=74.864307ms, RSS=43130880; 
+[111/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=311.177518ms, RSS=153206784; 
+[112/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=64.11299ms, RSS=62427136; 
+[113/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=65.459537ms, RSS=62369792; 
+[114/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=59.801466ms, RSS=46825472; 
+[115/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=71.893538ms, RSS=43016192; 
+[116/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=314.189767ms, RSS=151564288; 
+[117/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=64.419675ms, RSS=62353408; 
+[118/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=61.187547ms, RSS=62705664; 
+[119/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=52.190153ms, RSS=46817280; 
+[120/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=327.361712ms, RSS=152178688; 
+[121/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=308.893244ms, RSS=147263488; 
+[122/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=77.06498ms, RSS=42852352; 
+[123/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=306.415827ms, RSS=151695360; 
+[124/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=51.106544ms, RSS=46030848; 
+[125/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=64.134799ms, RSS=62357504; 
+[126/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=64.806304ms, RSS=62423040; 
+[127/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=72.787321ms, RSS=43282432; 
+[128/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=296.006714ms, RSS=151179264; 
+[129/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=49.347613ms, RSS=46092288; 
+[130/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=64.768084ms, RSS=62410752; 
+[131/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=72.057028ms, RSS=62382080; 
+[132/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=295.313221ms, RSS=152117248; 
+[133/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=299.939989ms, RSS=150822912; 
+[134/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=50.230031ms, RSS=46850048; 
+[135/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=62.583831ms, RSS=62357504; 
+[136/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=63.33259ms, RSS=62394368; 
+[137/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=296.510092ms, RSS=150913024; 
+[138/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=82.736094ms, RSS=43257856; 
+[139/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=59.775826ms, RSS=47050752; 
+[140/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=62.254477ms, RSS=62476288; 
+[141/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=63.040494ms, RSS=62382080; 
+[142/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=297.616671ms, RSS=148242432; 
+[143/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=79.7548ms, RSS=43163648; 
+[144/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=291.65659ms, RSS=149422080; 
+[145/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=69.983393ms, RSS=62373888; 
+[146/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=66.15735ms, RSS=62410752; 
+[147/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=300.29544ms, RSS=151396352; 
+[148/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=84.773886ms, RSS=43261952; 
+[149/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=295.87156ms, RSS=150007808; 
+[150/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=56.518701ms, RSS=46981120; 
+[151/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=63.198159ms, RSS=62414848; 
+[152/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=297.005997ms, RSS=150888448; 
+[153/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=74.016549ms, RSS=43294720; 
+[154/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=298.545032ms, RSS=147243008; 
+[155/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=49.511558ms, RSS=46829568; 
+[156/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=73.9328ms, RSS=62517248; 
+[157/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=316.508686ms, RSS=149762048; 
+[158/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=72.156746ms, RSS=43384832; 
+[159/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=306.268734ms, RSS=149925888; 
+[160/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=57.308442ms, RSS=46923776; 
+[161/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=62.280603ms, RSS=62365696; 
+[162/516] {'phase': 'evaluation', 'scenario': 'medium-dense', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=64.18347ms, RSS=62431232; 
+[163/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=39.78208ms, RSS=193859584; 
+[164/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=621.603145ms, RSS=166522880; 
+[165/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=166.595589ms, RSS=273186816; 
+[166/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=14.713867ms, RSS=164282368; 
+[167/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=145.352729ms, RSS=271093760; 
+[168/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=54.326596ms, RSS=193859584; 
+[169/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=634.592432ms, RSS=166547456; 
+[170/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=147.891795ms, RSS=273395712; 
+[171/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=15.401026ms, RSS=164261888; 
+[172/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=143.266617ms, RSS=273797120; 
+[173/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=54.958096ms, RSS=193949696; 
+[174/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=34.905583ms, RSS=193994752; 
+[175/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=39.690336ms, RSS=193871872; 
+[176/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=52.281061ms, RSS=193925120; 
+[177/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=650.575003ms, RSS=166494208; 
+[178/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=149.325286ms, RSS=269246464; 
+[179/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=152.471577ms, RSS=273235968; 
+[180/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=16.483393ms, RSS=164380672; 
+[181/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=60.599364ms, RSS=193789952; 
+[182/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=660.404236ms, RSS=166518784; 
+[183/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=144.292283ms, RSS=267894784; 
+[184/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=151.918153ms, RSS=272494592; 
+[185/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=16.777266ms, RSS=164278272; 
+[186/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=35.74924ms, RSS=193871872; 
+[187/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=636.412392ms, RSS=166502400; 
+[188/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=149.380409ms, RSS=270323712; 
+[189/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=153.663461ms, RSS=267063296; 
+[190/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=14.746361ms, RSS=164265984; 
+[191/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=40.498138ms, RSS=193933312; 
+[192/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=54.426603ms, RSS=193777664; 
+[193/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=146.584643ms, RSS=257019904; 
+[194/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=146.120829ms, RSS=273600512; 
+[195/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=16.543614ms, RSS=164306944; 
+[196/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=33.657943ms, RSS=194048000; 
+[197/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=56.166516ms, RSS=193835008; 
+[198/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=610.057956ms, RSS=166457344; 
+[199/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=157.446667ms, RSS=272764928; 
+[200/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=19.145053ms, RSS=164306944; 
+[201/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=38.775777ms, RSS=193953792; 
+[202/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=58.940515ms, RSS=193994752; 
+[203/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=624.859791ms, RSS=166486016; 
+[204/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=145.759865ms, RSS=271171584; 
+[205/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=14.208369ms, RSS=164384768; 
+[206/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=35.642782ms, RSS=193843200; 
+[207/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=54.897379ms, RSS=193871872; 
+[208/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=611.052348ms, RSS=166481920; 
+[209/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=155.13911ms, RSS=274046976; 
+[210/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=151.795095ms, RSS=268754944; 
+[211/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=34.701657ms, RSS=193867776; 
+[212/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=53.369345ms, RSS=193830912; 
+[213/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=612.231269ms, RSS=166490112; 
+[214/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=158.628225ms, RSS=263110656; 
+[215/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=154.290105ms, RSS=273178624; 
+[216/516] {'phase': 'evaluation', 'scenario': 'large-sparse', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=15.711796ms, RSS=164265984; 
+[217/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=45.742653ms, RSS=193859584; 
+[218/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=13.235536ms, RSS=164245504; 
+[219/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=32.303962ms, RSS=193839104; 
+[220/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=123.095194ms, RSS=269873152; 
+[221/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=133.526942ms, RSS=268308480; 
+[222/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=613.174679ms, RSS=166567936; 
+[223/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=13.698449ms, RSS=164175872; 
+[224/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=34.496896ms, RSS=193880064; 
+[225/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=121.380977ms, RSS=254849024; 
+[226/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=118.150376ms, RSS=268222464; 
+[227/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=685.641111ms, RSS=166486016; 
+[228/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=44.881008ms, RSS=193728512; 
+[229/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=627.733227ms, RSS=166510592; 
+[230/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=122.330257ms, RSS=270819328; 
+[231/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=50.674326ms, RSS=193773568; 
+[232/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=14.489064ms, RSS=164143104; 
+[233/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=107.371606ms, RSS=267325440; 
+[234/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=31.601222ms, RSS=193802240; 
+[235/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=125.593573ms, RSS=271376384; 
+[236/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=50.998547ms, RSS=193859584; 
+[237/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=13.802807ms, RSS=164208640; 
+[238/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=128.054509ms, RSS=266801152; 
+[239/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=33.714603ms, RSS=193871872; 
+[240/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=599.984862ms, RSS=166555648; 
+[241/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=45.158279ms, RSS=193814528; 
+[242/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=14.117187ms, RSS=164237312; 
+[243/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=116.898489ms, RSS=270217216; 
+[244/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=32.762211ms, RSS=193851392; 
+[245/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=609.196338ms, RSS=166490112; 
+[246/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=126.813437ms, RSS=271425536; 
+[247/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=13.166942ms, RSS=164184064; 
+[248/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=123.215603ms, RSS=267546624; 
+[249/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=37.021614ms, RSS=193765376; 
+[250/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=617.90948ms, RSS=166555648; 
+[251/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=127.163509ms, RSS=268980224; 
+[252/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=46.686743ms, RSS=193880064; 
+[253/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=124.269391ms, RSS=265596928; 
+[254/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=31.311316ms, RSS=193761280; 
+[255/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=615.044209ms, RSS=166469632; 
+[256/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=116.929035ms, RSS=269729792; 
+[257/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=44.81582ms, RSS=193810432; 
+[258/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=13.685476ms, RSS=164139008; 
+[259/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=31.742041ms, RSS=193765376; 
+[260/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=613.998694ms, RSS=166490112; 
+[261/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=133.071002ms, RSS=268333056; 
+[262/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=54.355664ms, RSS=193826816; 
+[263/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=13.013027ms, RSS=164159488; 
+[264/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=123.166519ms, RSS=265818112; 
+[265/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=623.477638ms, RSS=166588416; 
+[266/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=118.683101ms, RSS=260915200; 
+[267/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=47.253058ms, RSS=193761280; 
+[268/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=14.157643ms, RSS=164229120; 
+[269/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=123.242025ms, RSS=252354560; 
+[270/516] {'phase': 'evaluation', 'scenario': 'large-application-key-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=31.967029ms, RSS=193757184; 
+[271/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=139.904781ms, RSS=272896000; 
+[272/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=52.621747ms, RSS=193863680; 
+[273/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=137.15845ms, RSS=274952192; 
+[274/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=33.944875ms, RSS=193933312; 
+[275/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=14.054535ms, RSS=164241408; 
+[276/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=672.296233ms, RSS=166551552; 
+[277/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=52.955078ms, RSS=193851392; 
+[278/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=129.126523ms, RSS=266891264; 
+[279/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=34.107597ms, RSS=193859584; 
+[280/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=14.690486ms, RSS=164335616; 
+[281/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=684.240157ms, RSS=166567936; 
+[282/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=136.002892ms, RSS=268795904; 
+[283/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=14.294164ms, RSS=164306944; 
+[284/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=32.987722ms, RSS=193777664; 
+[285/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=139.076616ms, RSS=268390400; 
+[286/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=135.765249ms, RSS=272285696; 
+[287/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=66.521366ms, RSS=193843200; 
+[288/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=621.240875ms, RSS=166506496; 
+[289/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=34.536674ms, RSS=193966080; 
+[290/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=122.707642ms, RSS=270778368; 
+[291/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=127.513775ms, RSS=273383424; 
+[292/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=62.02586ms, RSS=193830912; 
+[293/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=694.495255ms, RSS=166490112; 
+[294/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=15.364716ms, RSS=164286464; 
+[295/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=135.727807ms, RSS=271880192; 
+[296/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=130.072413ms, RSS=270422016; 
+[297/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=50.453755ms, RSS=193777664; 
+[298/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=619.244715ms, RSS=166543360; 
+[299/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=14.903608ms, RSS=164302848; 
+[300/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=38.140608ms, RSS=193843200; 
+[301/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=136.293438ms, RSS=271319040; 
+[302/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=55.137047ms, RSS=193851392; 
+[303/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=618.51397ms, RSS=166486016; 
+[304/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=16.287232ms, RSS=164392960; 
+[305/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=35.100476ms, RSS=193855488; 
+[306/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=133.233091ms, RSS=273375232; 
+[307/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=52.435042ms, RSS=193835008; 
+[308/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=635.126697ms, RSS=166506496; 
+[309/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=15.213798ms, RSS=164339712; 
+[310/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=35.069098ms, RSS=193855488; 
+[311/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=132.311077ms, RSS=271343616; 
+[312/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=131.034081ms, RSS=270159872; 
+[313/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=647.098311ms, RSS=166526976; 
+[314/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=14.390362ms, RSS=164339712; 
+[315/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=33.648119ms, RSS=193765376; 
+[316/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=125.106919ms, RSS=273874944; 
+[317/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=145.640027ms, RSS=271171584; 
+[318/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=54.016185ms, RSS=193781760; 
+[319/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=15.084029ms, RSS=164282368; 
+[320/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=34.051598ms, RSS=193843200; 
+[321/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=130.127338ms, RSS=270479360; 
+[322/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=136.68842ms, RSS=270684160; 
+[323/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=54.352323ms, RSS=193855488; 
+[324/516] {'phase': 'evaluation', 'scenario': 'large-range-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=634.952267ms, RSS=166535168; 
+[325/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.31431ms, RSS=193802240; 
+[326/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=627.980288ms, RSS=169697280; 
+[327/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=93.8222ms, RSS=260468736; 
+[328/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=91.567247ms, RSS=273305600; 
+[329/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=6.682693ms, RSS=193777664; 
+[330/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=2.480844ms, RSS=165838848; 
+[331/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=631.718885ms, RSS=169607168; 
+[332/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=90.747366ms, RSS=272494592; 
+[333/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=92.427446ms, RSS=262443008; 
+[334/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=6.680032ms, RSS=193728512; 
+[335/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=2.985535ms, RSS=165683200; 
+[336/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.35261ms, RSS=193777664; 
+[337/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=644.245837ms, RSS=169689088; 
+[338/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=97.00627ms, RSS=261255168; 
+[339/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=2.367524ms, RSS=165720064; 
+[340/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=91.325215ms, RSS=258818048; 
+[341/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.305243ms, RSS=193732608; 
+[342/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=6.886171ms, RSS=193720320; 
+[343/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=98.203418ms, RSS=261570560; 
+[344/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=2.317826ms, RSS=165711872; 
+[345/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=95.230438ms, RSS=257044480; 
+[346/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.369029ms, RSS=193859584; 
+[347/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=6.401022ms, RSS=193777664; 
+[348/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=658.365409ms, RSS=169623552; 
+[349/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=2.405154ms, RSS=165752832; 
+[350/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=94.445834ms, RSS=261484544; 
+[351/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1.282503ms, RSS=193753088; 
+[352/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=6.862213ms, RSS=193835008; 
+[353/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=649.572129ms, RSS=169639936; 
+[354/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=100.543531ms, RSS=265330688; 
+[355/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=93.604311ms, RSS=260915200; 
+[356/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=1.34533ms, RSS=193818624; 
+[357/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=6.823966ms, RSS=193753088; 
+[358/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=658.941302ms, RSS=169627648; 
+[359/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=92.754773ms, RSS=262152192; 
+[360/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=2.357017ms, RSS=165654528; 
+[361/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.364643ms, RSS=193748992; 
+[362/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=7.005637ms, RSS=193880064; 
+[363/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=640.664661ms, RSS=169627648; 
+[364/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=94.021836ms, RSS=270974976; 
+[365/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=3.106843ms, RSS=165548032; 
+[366/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=91.984027ms, RSS=259063808; 
+[367/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=6.625851ms, RSS=193806336; 
+[368/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=650.882688ms, RSS=169701376; 
+[369/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=97.451282ms, RSS=268038144; 
+[370/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=2.315242ms, RSS=164179968; 
+[371/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=90.266026ms, RSS=258633728; 
+[372/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.319148ms, RSS=193744896; 
+[373/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=650.47501ms, RSS=169615360; 
+[374/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=97.681984ms, RSS=261611520; 
+[375/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=2.494545ms, RSS=165642240; 
+[376/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=99.001506ms, RSS=261865472; 
+[377/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.373941ms, RSS=193773568; 
+[378/516] {'phase': 'evaluation', 'scenario': 'large-repeated-key', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=8.031598ms, RSS=193777664; 
+[379/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.51206ms, RSS=191004672; 
+[380/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=619.278396ms, RSS=167088128; 
+[381/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=2.568269ms, RSS=164720640; 
+[382/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=109.289379ms, RSS=255381504; 
+[383/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.901801ms, RSS=190996480; 
+[384/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=105.112169ms, RSS=268226560; 
+[385/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=670.869539ms, RSS=167100416; 
+[386/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=2.427024ms, RSS=164679680; 
+[387/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=109.88502ms, RSS=258805760; 
+[388/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.862644ms, RSS=191000576; 
+[389/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=107.925009ms, RSS=272736256; 
+[390/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.460039ms, RSS=191090688; 
+[391/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=2.506959ms, RSS=164683776; 
+[392/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=110.965681ms, RSS=262037504; 
+[393/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=641.979077ms, RSS=167018496; 
+[394/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=108.026711ms, RSS=263925760; 
+[395/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.511763ms, RSS=190996480; 
+[396/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.78945ms, RSS=191004672; 
+[397/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=106.029279ms, RSS=260460544; 
+[398/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=632.236602ms, RSS=167026688; 
+[399/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=100.818402ms, RSS=263806976; 
+[400/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.488438ms, RSS=191000576; 
+[401/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=1.84807ms, RSS=191045632; 
+[402/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=2.430968ms, RSS=164691968; 
+[403/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=625.632837ms, RSS=167022592; 
+[404/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=105.536162ms, RSS=256376832; 
+[405/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1.502647ms, RSS=191029248; 
+[406/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=1.817375ms, RSS=191000576; 
+[407/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=2.392372ms, RSS=164691968; 
+[408/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=103.425382ms, RSS=261955584; 
+[409/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=105.684432ms, RSS=263122944; 
+[410/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=1.492472ms, RSS=191107072; 
+[411/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1.771439ms, RSS=191000576; 
+[412/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=2.523007ms, RSS=164691968; 
+[413/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=115.022411ms, RSS=269127680; 
+[414/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=706.264714ms, RSS=167034880; 
+[415/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.472956ms, RSS=190971904; 
+[416/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=1.816561ms, RSS=191041536; 
+[417/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=2.392543ms, RSS=164683776; 
+[418/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=103.486437ms, RSS=262533120; 
+[419/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=700.013043ms, RSS=167026688; 
+[420/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=105.184048ms, RSS=267939840; 
+[421/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1.809476ms, RSS=190984192; 
+[422/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=2.387956ms, RSS=164691968; 
+[423/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=119.641939ms, RSS=268288000; 
+[424/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=642.197874ms, RSS=167043072; 
+[425/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=106.503319ms, RSS=258818048; 
+[426/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.552623ms, RSS=190992384; 
+[427/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'log', 'model': 'Log-only', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=2.427367ms, RSS=164683776; 
+[428/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=111.423928ms, RSS=262041600; 
+[429/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'snapshot', 'model': 'Snapshot', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=626.324157ms, RSS=167051264; 
+[430/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'dolt-bulk', 'model': 'Dolt (bulk import)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 4, 'threshold': 4096}
+  ok: diff=108.143925ms, RSS=263081984; 
+[431/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 5, 'threshold': 4096}
+  ok: diff=2.331984ms, RSS=191037440; 
+[432/516] {'phase': 'evaluation', 'scenario': 'large-hash-route-local', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 6, 'threshold': 4096}
+  ok: diff=1.82722ms, RSS=190988288; 
+[433/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=17.430614ms, RSS=57741312; 
+[434/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=22.151529ms, RSS=57651200; 
+[435/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=16.031289ms, RSS=57696256; 
+[436/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=24.551857ms, RSS=57651200; 
+[437/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=20.684045ms, RSS=57679872; 
+[438/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=16.543308ms, RSS=57643008; 
+[439/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=16.739414ms, RSS=57634816; 
+[440/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=19.441004ms, RSS=57688064; 
+[441/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=21.827742ms, RSS=57683968; 
+[442/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=18.71191ms, RSS=57630720; 
+[443/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=24.465932ms, RSS=57651200; 
+[444/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=16.358578ms, RSS=57700352; 
+[445/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=28.384447ms, RSS=57667584; 
+[446/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=15.901339ms, RSS=57667584; 
+[447/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=16.315963ms, RSS=57622528; 
+[448/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=16.269478ms, RSS=57643008; 
+[449/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=17.926071ms, RSS=57638912; 
+[450/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=26.196235ms, RSS=57647104; 
+[451/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=16.057568ms, RSS=57667584; 
+[452/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=22.959938ms, RSS=57696256; 
+[453/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=17.966208ms, RSS=57692160; 
+[454/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=25.040304ms, RSS=57638912; 
+[455/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=16.364231ms, RSS=57708544; 
+[456/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=17.210616ms, RSS=57700352; 
+[457/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=16.508895ms, RSS=57679872; 
+[458/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=18.122847ms, RSS=57647104; 
+[459/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h16-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=22.014027ms, RSS=57753600; 
+[460/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=39.845558ms, RSS=104009728; 
+[461/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=43.185299ms, RSS=104058880; 
+[462/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=45.557816ms, RSS=104038400; 
+[463/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=45.518681ms, RSS=103985152; 
+[464/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=42.402914ms, RSS=103997440; 
+[465/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=45.523262ms, RSS=104075264; 
+[466/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=48.453223ms, RSS=104034304; 
+[467/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=43.229298ms, RSS=104042496; 
+[468/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=43.352842ms, RSS=104005632; 
+[469/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=44.029945ms, RSS=104017920; 
+[470/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=40.519515ms, RSS=103993344; 
+[471/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=45.944129ms, RSS=104013824; 
+[472/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=38.213692ms, RSS=104001536; 
+[473/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=46.607599ms, RSS=104005632; 
+[474/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=44.380701ms, RSS=104062976; 
+[475/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=47.678556ms, RSS=104001536; 
+[476/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=44.614421ms, RSS=103997440; 
+[477/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=42.759543ms, RSS=104108032; 
+[478/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=46.971332ms, RSS=104116224; 
+[479/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=39.778047ms, RSS=104058880; 
+[480/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=42.965997ms, RSS=104058880; 
+[481/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=38.257674ms, RSS=104075264; 
+[482/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=43.492092ms, RSS=104022016; 
+[483/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=42.838506ms, RSS=104030208; 
+[484/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 16384}
+  ok: diff=44.524ms, RSS=104067072; 
+[485/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 16384}
+  ok: diff=44.120216ms, RSS=104013824; 
+[486/516] {'phase': 'threshold-supplement', 'scenario': 'linux-threshold-h64-c512', 'model_key': 'revon-log', 'model': 'Revon-log calibration', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 16384}
+  ok: diff=42.907337ms, RSS=104124416; 
+[487/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=168.494724ms, RSS=443502592; 
+[488/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=45.387595ms, RSS=281624576; 
+[489/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=61.236991ms, RSS=281608192; 
+[490/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=42.513716ms, RSS=281661440; 
+[491/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=59.778823ms, RSS=281661440; 
+[492/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'warmup', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=169.214719ms, RSS=449855488; 
+[493/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=41.453575ms, RSS=281640960; 
+[494/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=58.982948ms, RSS=281620480; 
+[495/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=168.842706ms, RSS=449949696; 
+[496/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=66.977757ms, RSS=281673728; 
+[497/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=167.995036ms, RSS=444604416; 
+[498/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 2, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=46.157568ms, RSS=281595904; 
+[499/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=166.783412ms, RSS=447393792; 
+[500/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=44.251047ms, RSS=281587712; 
+[501/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 3, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=61.564688ms, RSS=281030656; 
+[502/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=40.300292ms, RSS=281591808; 
+[503/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=60.591064ms, RSS=281653248; 
+[504/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 4, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=175.173449ms, RSS=447197184; 
+[505/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=62.514882ms, RSS=281620480; 
+[506/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=166.751331ms, RSS=448299008; 
+[507/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 5, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=40.943227ms, RSS=281587712; 
+[508/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=168.576238ms, RSS=439287808; 
+[509/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=41.964467ms, RSS=281669632; 
+[510/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 6, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=60.596685ms, RSS=281608192; 
+[511/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=44.443311ms, RSS=281640960; 
+[512/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=60.19443ms, RSS=281640960; 
+[513/516] {'phase': 'evaluation', 'scenario': 'linux-tlc-n100000-h10-c100', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'measured', 'trial': 7, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=175.86376ms, RSS=446668800; 
+[514/516] {'phase': 'scale-feasibility', 'scenario': 'linux-tlc-n1000000-h10-c1000', 'model_key': 'revon-h', 'model': 'Revon-H', 'trial_kind': 'diagnostic', 'trial': 1, 'execution_order': 1, 'threshold': 4096}
+  ok: diff=1233.601293ms, RSS=2749390848; 
+[515/516] {'phase': 'scale-feasibility', 'scenario': 'linux-tlc-n1000000-h10-c1000', 'model_key': 'dolt', 'model': 'Dolt', 'trial_kind': 'diagnostic', 'trial': 1, 'execution_order': 2, 'threshold': 4096}
+  ok: diff=817.034424ms, RSS=2743881728; 
+[516/516] {'phase': 'scale-feasibility', 'scenario': 'linux-tlc-n1000000-h10-c1000', 'model_key': 'revon-m', 'model': 'Revon-M (forced Merkle)', 'trial_kind': 'diagnostic', 'trial': 1, 'execution_order': 3, 'threshold': 4096}
+  ok: diff=1265.367373ms, RSS=2749345792; 
+{
+  "passed": true,
+  "issues": [],
+  "raw_rows": 516,
+  "expected_rows": 516,
+  "correct_rows": 516,
+  "warmup_rows": 114,
+  "measured_rows": 399,
+  "diagnostic_rows": 3,
+  "audit_scope": "source/protocol/matrix/semantic output hashes/history/summary integrity; not independent timing reproduction"
+}

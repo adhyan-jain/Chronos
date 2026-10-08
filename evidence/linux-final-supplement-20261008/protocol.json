@@ -1,0 +1,315 @@
+{
+  "campaign_wall_limit_seconds": 7200,
+  "cases": [
+    {
+      "dataset": "synthetic",
+      "historical_reference": "separate counter-repair supplement; not pooled with original campaign",
+      "measured_kind": "measured",
+      "models": [
+        "revon-m",
+        "revon-h",
+        "dolt"
+      ],
+      "phase": "evaluation",
+      "spec": {
+        "changes_per_commit": 100,
+        "commits": 10,
+        "locality": "spread",
+        "name": "linux-telemetry-n10000-h10-c100",
+        "payload_bytes": 32,
+        "rows": 10000,
+        "seed": 20261008
+      },
+      "threshold": 4096,
+      "trials": 7,
+      "warmups": 2
+    }
+  ],
+  "created_utc": "2026-10-08T15:13:31.044306+00:00",
+  "execution_plan": [
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "warmup"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 1,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 2,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 3,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 4,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 5,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 6,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 1,
+      "model": "Revon-M (forced Merkle)",
+      "model_key": "revon-m",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 2,
+      "model": "Revon-H",
+      "model_key": "revon-h",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    },
+    {
+      "execution_order": 3,
+      "model": "Dolt",
+      "model_key": "dolt",
+      "phase": "evaluation",
+      "scenario": "linux-telemetry-n10000-h10-c100",
+      "threshold": 4096,
+      "trial": 7,
+      "trial_kind": "measured"
+    }
+  ],
+  "include_public": false,
+  "limitations": [
+    "additional machine, not independent research team",
+    "hardware/OS/virtualization/storage differ; no Linux-only causal effect",
+    "repaired-source evidence separate from historical pre-repair Windows timings",
+    "one million rows: one diagnostic trial per system, no performance ranking",
+    "cached single-host repetitions do not establish population generality",
+    "Revon API versus Dolt CLI workflow, not engine-only comparison"
+  ],
+  "no_calibration": true,
+  "trial_timeout_seconds": 900,
+  "workload_hashes": {
+    "linux-telemetry-n10000-h10-c100": "34d22946f31a09742010faddfe62933a131d4da94e624acd6d9d88e59bd648fc"
+  }
+}

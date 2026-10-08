@@ -395,7 +395,8 @@ def blocks(source,data):
         mention=table_mentions.get(b.get("number")) if b["kind"]=="table" else figure_mentions.get(b.get("number")) if b["kind"]=="figure" else None
         if mention:expanded.append(dict(kind="body",text=mention))
         expanded.append(b)
-    return expanded
+    from referee_revision import revise
+    return revise(expanded)
 
 def columns(section,n):
     cols=section._sectPr.find(qn("w:cols"))
@@ -441,7 +442,7 @@ def sanitize(doc,font):
                 if "Theme" in key or "theme" in key:del fonts.attrib[key]
             fonts.set(qn("w:ascii"),font);fonts.set(qn("w:hAnsi"),font);fonts.set(qn("w:eastAsia"),font);fonts.set(qn("w:cs"),font)
 
-ROMAN={1:"I",2:"II",3:"III",4:"IV",5:"V",6:"VI",7:"VII",8:"VIII",9:"IX",10:"X",11:"XI"}
+ROMAN={1:"I",2:"II",3:"III",4:"IV",5:"V",6:"VI",7:"VII",8:"VIII",9:"IX",10:"X",11:"XI",12:"XII",13:"XIII",14:"XIV",15:"XV",16:"XVI"}
 
 def add_table(doc,block,ieee):
     size=8.5 if ieee else 12;full=7 if ieee else 6.76
@@ -471,7 +472,7 @@ def add_table(doc,block,ieee):
                 p.paragraph_format.space_after=Pt(3);p.paragraph_format.space_before=Pt(2);p.paragraph_format.line_spacing=1.04
                 # A short table stays intact; long journal tables may continue
                 # with repeated headers, but never strand the last data row.
-                short_table=(ieee and len(block['rows'])<=18) or (not ieee and block['number'] in (1,2,3,4,5,10,11) and len(block['rows'])<=24)
+                short_table=(ieee and len(block['rows'])<=18) or (not ieee and block['number'] in (1,2,3,4,5,10,11,12,13,14,15,16) and len(block['rows'])<=24)
                 p.paragraph_format.keep_with_next=i<len(block['rows']) if short_table else (i==0 or i==len(block['rows'])-1)
                 p.paragraph_format.widow_control=True
                 for r in p.runs:r.font.name="Times New Roman" if ieee else "Arial";r.font.size=Pt(size);r.bold=i==0
@@ -496,13 +497,14 @@ def build_doc(blocks,assets,path,ieee):
             if ieee:new_section(doc,1)
             p=doc.add_paragraph();p.alignment=WD_ALIGN_PARAGRAPH.CENTER;p.paragraph_format.keep_with_next=True;p.paragraph_format.space_after=Pt(4)
             p.add_run().add_picture(assets[number],width=Inches(7 if ieee and full else 3.4 if ieee else 6.4 if full else 3.8))
-            caption=f"Fig. {number}"+(". " if ieee else " ")+b["caption"]+". Plotting/diagram code assisted by OpenAI Codex; content derives from measured data or inspected code."
+            caption=f"Fig. {number}"+(". " if ieee else " ")+b["caption"]+"."
             if not ieee:caption=caption.replace('Tables VI and VII','Tables 6 and 7').rstrip(".")
             p=doc.add_paragraph(caption,style="Caption");p.paragraph_format.keep_with_next=False;p.paragraph_format.keep_together=True;p.paragraph_format.widow_control=True
             if ieee:new_section(doc,2)
             continue
         text=b["text"]
         if not ieee:
+            text=text.replace("Tables XII-XV", "Tables 12-15")
             for n,r in sorted(ROMAN.items(),reverse=True):text=text.replace("Table "+r,"Table "+str(n))
             if kind=="h1":text=re.sub(r"^([IVX]+)\. ",lambda m:str(next(k for k,v in ROMAN.items() if v==m[1]))+" ",text).title()
             if kind=="h2":text=re.sub(r"^[A-Z]\. ","",text)
@@ -621,7 +623,8 @@ def main():
     content=blocks(source,data);(AUDIT/"manuscript_model.json").write_text(json.dumps(content,indent=2),encoding="utf-8")
     build_doc(content,assets,ROOT/"paper/Revon_Research_Paper_Discover_Computing.docx",False)
     build_doc(content,assets,ROOT/"paper/Revon_Research_Paper_IEEE.docx",True)
-    if not args.manuscripts_only:report(data);audit_document(data)
+    # The October referee response supersedes the older generated assessments.
+    # Do not overwrite it with the historical seven-issue screening report.
     print(json.dumps(dict(title=TITLE,blocks=len(content),figures=len(assets),tables=sum(b['kind']=='table' for b in content),frozen_threshold=data['frozen_threshold']),indent=2))
 
 if __name__=="__main__":main()

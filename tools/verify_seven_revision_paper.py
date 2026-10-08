@@ -16,11 +16,12 @@ import pymupdf
 
 ROOT=Path(__file__).resolve().parents[1]
 TITLE="Adaptive Merkle Trie Versioning for Efficient Structured Data Management"
-ROMANS={"I":1,"II":2,"III":3,"IV":4,"V":5,"VI":6,"VII":7,"VIII":8,"IX":9,"X":10,"XI":11}
+ROMANS={"I":1,"II":2,"III":3,"IV":4,"V":5,"VI":6,"VII":7,"VIII":8,"IX":9,"X":10,"XI":11,"XII":12,"XIII":13,"XIV":14,"XV":15,"XVI":16}
 
 def normalize(text):
+    text=text.replace('Tables XII-XV','Tables 12-15')
     text=text.replace('Tables VI and VII','Tables 6 and 7')
-    text=re.sub(r"\b(?:TABLE|Table) (VIII|VII|III|VI|IV|IX|XI|II|V|X|I)\b",lambda m:"Table "+str(ROMANS[m[1]]),text)
+    text=re.sub(r"\b(?:TABLE|Table) ([IVX]+)\b",lambda m:"Table "+str(ROMANS[m[1]]),text)
     text=re.sub(r"^([IVX]+)\. ",lambda m:str(ROMANS[m[1]])+" ",text)
     text=re.sub(r"^[A-Z]\. ","",text)
     text=re.sub(r"(Fig\. \d+|Table \d+)\. ",r"\1 ",text)
@@ -42,7 +43,7 @@ def check_doc(path,discover):
     assert " ".join(doc.paragraphs[0].text.split())==TITLE
     abstract=next(p.text for p in doc.paragraphs if p.text.startswith("Abstract:"))
     assert len(abstract.split())-1<250
-    assert len(doc.tables)==11 and len(doc.inline_shapes)==11
+    assert len(doc.tables)==16 and len(doc.inline_shapes)==11
     numbers=[int(m[1]) for p in doc.paragraphs if (m:=re.match(r"^\[(\d+)\]",p.text))]
     assert numbers==list(range(1,32))
     ref_index=next(i for i,p in enumerate(doc.paragraphs) if p.text.lower()=="references")
@@ -56,10 +57,10 @@ def check_doc(path,discover):
     figures=[int(m[1]) for p in doc.paragraphs if (m:=re.match(r"^Fig\. (\d+)",p.text))]
     assert figures==list(range(1,12)),figures
     tables=[p.text for p in doc.paragraphs if p.style.name=='Caption' and re.match(r"^(?:TABLE [IVX]+\.|Table \d+ )",p.text)]
-    assert len(tables)==11
+    assert len(tables)==16
     assert not doc.element.xpath(".//w:pBdr") and not doc.styles.element.xpath(".//w:pBdr"),"title-rule residue"
     assert "\u2014" not in body,"em dash remains"
-    for text in ("geometry remains fixed","same physical computer","independent","changesets","16,384","4,096","unpaired","recovery","author-confirmed declarations have not yet been supplied"):
+    for text in ("geometry remains fixed","same physical computer","independent","changesets","16,384","4,096","unpaired","recovery","received no funding","no competing interests","always-log","JSON value ownership","historical performance","Corresponding author: Poornima N"):
         assert text.lower() in body.lower(),text
     for table in doc.tables:
         assert table.rows[0]._tr.xpath("./w:trPr/w:tblHeader"),"missing repeated header"
@@ -74,8 +75,10 @@ def check_doc(path,discover):
         assert any(s._sectPr.find(qn("w:cols")).get(qn("w:num"),"1")=="2" for s in doc.sections)
     for token in ('714','546','three independent histories','Six spread cases','no new threshold','0.614','1.213','13.1-22.2%'):
         assert token.lower() in body.lower(),token
-    assert [[c.text for c in row.cells] for row in doc.tables[-1].rows][0]==['Rows / history / locality','Operations','Seed 21','Seed 22','Seed 23']
-    return doc,dict(path=str(path),paragraphs=len(doc.paragraphs),tables=11,figures=11,references=31,abstract_words=len(abstract.split())-1)
+    assert [[c.text for c in row.cells] for row in doc.tables[10].rows][0]==['Rows / history / locality','Operations','Seed 21','Seed 22','Seed 23']
+    assert [c.text for c in doc.tables[4].rows[-2].cells][:3]==['Always-log','1.000','1.000']
+    assert not any(s in body for s in ('author-confirmed declarations have not yet been supplied','Local revision evidence is not yet a public release'))
+    return doc,dict(path=str(path),paragraphs=len(doc.paragraphs),tables=16,figures=11,references=31,abstract_words=len(abstract.split())-1)
 
 def check_pilot():
     directory=ROOT/'evidence/threshold-robustness-pilot-20261002'
@@ -103,7 +106,7 @@ def check_pilot():
         medians={r['strategy']:float(r['median_ms']) for r in summary if r['case']==row['case'] and r['cache_condition']==row['cache_condition'] and r['strategy'] in ('log','merkle')}
         assert abs(row['log_over_merkle']-medians['log']/medians['merkle'])<1e-10
     manuscript=Document(ROOT/'paper/Revon_Research_Paper_IEEE.docx')
-    for table_row,(locality,operations) in zip(manuscript.tables[-1].rows[1:],[('repeated-key',32768),('repeated-key',65536),('repeated-key',131072),('spread',65536)]):
+    for table_row,(locality,operations) in zip(manuscript.tables[10].rows[1:],[('repeated-key',32768),('repeated-key',65536),('repeated-key',131072),('spread',65536)]):
         samples=sorted((r for r in ratios if r['cache_condition']=='warmed-built' and r['locality']==locality and r['operations']==operations),key=lambda r:r['seed'])
         assert [r['seed'] for r in samples]==[20261021,20261022,20261023]
         assert [c.text for c in table_row.cells][2:]==[f"{r['log_over_merkle']:.3f}" for r in samples]

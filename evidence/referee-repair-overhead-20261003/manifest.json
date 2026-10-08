@@ -1,0 +1,45 @@
+{
+  "study": "JSON ownership/equality repair overhead; no threshold tuning",
+  "created_utc": "2026-10-02T23:22:38.197894+00:00",
+  "base_commit": "37d27d465ffc922a3881b85bb415574f956a9a09",
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "pythonhashseed": "20261003",
+  "profiles": [
+    {
+      "name": "10k-spread-h10",
+      "rows": 10000,
+      "commits": 10,
+      "changes": 10,
+      "locality": "spread"
+    },
+    {
+      "name": "10k-repeated-h50",
+      "rows": 10000,
+      "commits": 50,
+      "changes": 100,
+      "locality": "repeated"
+    },
+    {
+      "name": "100k-spread-h10",
+      "rows": 100000,
+      "commits": 10,
+      "changes": 100,
+      "locality": "spread"
+    }
+  ],
+  "blocks": 6,
+  "warmup_blocks": 1,
+  "measured_blocks": 5,
+  "order": "alternate before/after by block, reverse initial order by profile",
+  "clock": "commit wall clock; read clocks include canonical output; setup and correctness outside timers",
+  "limits": "One process and host; independent repository per block/variant, same deterministic workload; descriptive medians only",
+  "threshold": 4096,
+  "source_hashes": {
+    "source_before\\versioned_db.py": "2acc463f54af645dbe9b631cf9d26eaed3b3b0a6e5d0fe34e9f1130c5b6ba835",
+    "source_before\\sqlite_store.py": "c1454046c75532c314e215a3d41f60b5fab425bea5c1a50c96859bd302cf8a6a",
+    "source_after\\versioned_db.py": "18134275153ad2d47537f1495cb405808d5cd7ae358f81b3da8fd5e7468995b0",
+    "source_after\\sqlite_store.py": "7969db91158a33a2d3c67759012eec4677bb109de0011098a02fccd9c550d89e",
+    "referee_repair_check.py": "5b168e48a5c7fbfdb919fdbe1cd70fe875f0dd1c50c89395171a36b2b15c25cd"
+  }
+}

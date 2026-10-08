@@ -1,0 +1,11 @@
+{
+  "checked_utc": "2026-10-08T15:02:33.499217+00:00",
+  "archive_sha256": "dae48790fe42ca04f680fe70cf678ccfb7196cf8e5fb9df634eacd59dace2ccb",
+  "archive_matches_cloud_sha256": true,
+  "audit_passed": true,
+  "audited_from_archived_source": true,
+  "prepared_public_data_sha256": "6608b7680e82432ca22f90a71d4994676ffd290c4fc85f17f91fab03d4c7b661",
+  "paired_uncertainty_recomputed_exactly": true,
+  "verifier_python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Downloaded evidence integrity; no independent remeasurement of elapsed times"
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "rejected": [
+    "missing trial",
+    "corrupted observed diff hash",
+    "changed frozen threshold"
+  ],
+  "scope": "Real Linux Snapshot/Revon-H/Dolt workers on 100 rows; preflight only"
+}

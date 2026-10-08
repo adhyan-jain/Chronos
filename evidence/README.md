@@ -1,11 +1,34 @@
 # Audited research evidence
 
 This directory contains the reviewed evidence used by the final Revon paper.
-It is versioned so a reader can audit the published tables and figures from a
-fresh clone.
+The 2026-10-08 manuscript uses the two Linux bundles below. They are also
+packaged in Online Resource 1 with the manuscripts; local additions are not
+claimed to be present in the historical public Git commit.
 
 ## Bundles
 
+- `linux-final-supplement-20261008/` retains 27 isolated telemetry executions
+  and 45 fresh-worker geometry executions (16 warm-ups and 56 measured trials
+  combined). All passed correctness, including every historical state, after
+  69 Linux tests passed. Cloud and local audits passed; geometry summaries
+  were reproduced byte-for-byte. The corrected sampler preserves measured
+  zero read bytes and keeps unavailable counters missing. Its core database
+  sources match the first Linux bundle exactly. Timings are separate and are
+  not pooled. See its `README.md` and `local-verification.json`.
+- `linux-validation-20261008/` contains the additional GCP Ubuntu machine
+  validation of the repaired source: 516 successful executions (114 warm-ups,
+  399 measured trials and three million-row feasibility diagnostics), with 67
+  Linux unit tests passing. Cloud and local integrity audits passed, and the
+  paired summaries were reproduced exactly. The frozen protocol, executed
+  source, public-data checksums and per-trial historical/diff verification are
+  retained. Its fixed thresholds are 4,096 for the primary matrix and 16,384
+  for the separate threshold supplement. The latter found a slower hybrid
+  choice at 32,768 operations; it is not an optimal-threshold result. This is
+  author-run validation on an additional machine, not independent-team
+  reproduction or an OS-only causal comparison. Million-row rows are excluded
+  from repeated performance comparisons. Historical Windows timings predate
+  the JSON repair and remain separate evidence. See the bundle's `README.md`
+  for the findings and complete limitations.
 - `paper-final-20260824/` is the original 333-execution run (74 warm-ups,
   259 measured runs, of which 175 are primary evaluation runs). It is retained
   for provenance. Its Dolt `changed_keys` values came from the expected
@@ -18,8 +41,8 @@ fresh clone.
   Dolt commit hashes instead of creating timed tags, and externally samples
   isolated process-tree RSS at 10 ms. It is retained as the prior correction
   stage and is superseded for current paper claims by issues 13–17.
-- `paper-corrected-issues13-17-counterbalanced-final-20260923/` is the current
-  schema-4, 540-execution primary paper run. It separates SQL and Dolt bulk initial
+- `paper-corrected-issues13-17-counterbalanced-final-20260923/` is the historical
+  schema-4, 540-execution Windows paper run. It separates SQL and Dolt bulk initial
   import, uses balanced randomized order across trials, adds three locality
   workloads, and reports normalized and post-compaction workflow storage. Its
   internal evidence-integrity audit passed with all 540 rows successful.
