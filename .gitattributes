@@ -6,3 +6,7 @@
 # Preserve frozen calibration and diagnostic source hashes across checkouts.
 /evidence/threshold-*/** -text
 /evidence/crossover-diagnostic-*/** -text
+# Linux collection manifests hash original bytes, including line endings.
+/evidence/linux-validation-*/** -text
+/evidence/linux-final-supplement-*/** -text
+*.zip binary
