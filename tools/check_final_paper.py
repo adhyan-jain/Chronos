@@ -1,4 +1,4 @@
-"""Read-only CI checks of committed Linux manuscripts and recorded evidence.
+"""Read-only CI checks of current/archived manuscripts and recorded evidence.
 
 These are integrity/content checks, not timing reproduction or visual review.
 No ignored local output, private cloud archive, Word export or benchmark needed.
@@ -217,9 +217,12 @@ def main(root=ROOT):
     model, assets, package_hashes = check_package(root / "paper/Revon_Linux_Reproducibility_Supplement.zip", root)
     manuscripts = {}
     for form in ("IEEE", "Discover_Computing"):
-        path = root / f"paper/Revon_Research_Paper_{form}.docx"
-        manuscripts[form] = check_doc(path, model, assets, form == "Discover_Computing")
-        manuscripts[form].update(check_pdf(path.with_suffix(".pdf")))
+        path = root / f"paper/previous versions/Revon_Research_Paper_{form}.docx"
+        manuscripts[f"archived_{form}"] = check_doc(path, model, assets, form == "Discover_Computing")
+        manuscripts[f"archived_{form}"].update(check_pdf(path.with_suffix(".pdf")))
+    sys.path.insert(0, str(ROOT))
+    from tools.check_springer_paper import check_springer
+    manuscripts["current_Springer"] = check_springer(root / "paper/Revon Research Paper Springer.docx", model)
     report = dict(passed=True, manuscripts=manuscripts, package_hashes=package_hashes, evidence=check_evidence(root),
                   scope="read-only content, provenance, semantic proofs and summary integrity; not timing reproduction or visual certification")
     print(json.dumps(report, indent=2))

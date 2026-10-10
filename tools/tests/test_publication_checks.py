@@ -18,7 +18,7 @@ class PublicationCheckTests(unittest.TestCase):
     def setUpClass(cls):
         cls.package = ROOT / "paper/Revon_Linux_Reproducibility_Supplement.zip"
         cls.model, cls.assets, _ = check_package(cls.package, ROOT)
-        cls.source = ROOT / "paper/Revon_Research_Paper_Discover_Computing.docx"
+        cls.source = ROOT / "paper/previous versions/Revon_Research_Paper_Discover_Computing.docx"
 
     def mutate_document(self, mutation, error):
         with TemporaryDirectory() as directory:
@@ -32,7 +32,7 @@ class PublicationCheckTests(unittest.TestCase):
     def test_both_committed_formats_match_the_packaged_model(self):
         for form in ("IEEE", "Discover_Computing"):
             with self.subTest(form=form):
-                result = check_doc(ROOT / f"paper/Revon_Research_Paper_{form}.docx",
+                result = check_doc(ROOT / f"paper/previous versions/Revon_Research_Paper_{form}.docx",
                                    self.model, self.assets, form == "Discover_Computing")
                 self.assertEqual((result["tables"], result["figures"], result["references"]), (11, 7, 31))
 
