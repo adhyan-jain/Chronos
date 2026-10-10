@@ -10,17 +10,18 @@ Revon is licensed under the [Apache License 2.0](LICENSE).
 
 ## Paper and reproducibility
 
-- The current Linux-validated manuscript is available in Discover Computing
-  ([PDF](paper/Revon_Research_Paper_Discover_Computing.pdf),
-  [DOCX](paper/Revon_Research_Paper_Discover_Computing.docx)) and IEEE
-  ([PDF](paper/Revon_Research_Paper_IEEE.pdf),
-  [DOCX](paper/Revon_Research_Paper_IEEE.docx)) formats.
+- The current Springer manuscript is available as
+  [PDF](paper/Revon%20Research%20Paper%20Springer.pdf) and
+  [editable DOCX](paper/Revon%20Research%20Paper%20Springer.docx).
+  The earlier Discover Computing and IEEE exports are retained in
+  [`paper/previous versions/`](paper/previous%20versions/).
+  See [`paper/README.md`](paper/README.md) for the publication files and their scope.
 - The current Linux evidence contains 516 executions, with a separate
   72-execution geometry/telemetry supplement. The exact protocols, executed
   source, semantic checks, limitations and raw results are retained in
   [`evidence/linux-validation-20261008/`](evidence/linux-validation-20261008/)
   and [`evidence/linux-final-supplement-20261008/`](evidence/linux-final-supplement-20261008/).
-  [Online Resource 1](paper/Revon_Linux_Reproducibility_Supplement.zip) includes
+  The [GitHub reproducibility archive](paper/Revon_Linux_Reproducibility_Supplement.zip) includes
   the manuscript model and figure assets. Integrity checks do not constitute
   independent timing reproduction; timings from different campaigns must not
   be pooled.
@@ -52,8 +53,11 @@ python -m unittest discover -s tools/tests -v
 python tools/check_final_paper.py
 ```
 
-The publication gate checks both formats against the packaged model, all
-tables and figures, citations, PDF structure/bounds, collection/package/source
+The publication gate checks the archived Discover Computing and IEEE formats
+against their packaged model. It also checks the current Springer manuscript's
+numerical tables, figures and references, current GitHub link targets, and
+PDF/DOCX agreement for availability and reproducibility text. Together these
+checks cover PDF structure/bounds, collection/package/source
 hashes, frozen execution order, historical correctness proofs, raw summaries,
 paired intervals and the adverse frozen-threshold finding. It needs neither
 ignored `output/` files nor private cloud download archives. Visual review and
